@@ -8,7 +8,12 @@ import "../database/checkConnection";
 
 // Import the Express application from ./app
 import app from "./app";
+app.get("/", async (req, res) => {
+  const response = await fetch("https://api.deezer.com/album/302127");
+  const data = await response.json();
 
+  res.json(data);
+});
 // Get the port from the environment variables
 const port = process.env.APP_PORT;
 

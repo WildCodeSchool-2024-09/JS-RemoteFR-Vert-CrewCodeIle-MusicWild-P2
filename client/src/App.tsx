@@ -1,13 +1,19 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import Albums from "./components/Albums";
+import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
 function App() {
   return (
     <>
-      <header />
+      <header>
+        <NavBar />
+      </header>
       <main>
-        <Albums />
+        <Outlet />
       </main>
-      <footer />
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

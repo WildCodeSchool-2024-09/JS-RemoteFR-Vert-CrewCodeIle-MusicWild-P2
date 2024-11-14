@@ -1,0 +1,11 @@
+[
+  {
+    "id": 11,
+    "name": "The Rolling Stones",
+    "picture": "https://e-cdns-images.dzcdn.net/images/artist/2ceac184bc846327f60c5b0d4247cc7a/56x56-000000-80-0-0.jpg",
+    "picture_medium": "https://e-cdns-images.dzcdn.net/images/artist/2ceac184bc846327f60c5b0d4247cc7a/250x250-000000-80-0-0.jpg",
+    "picture_big": "https://e-cdns-images.dzcdn.net/images/artist/2ceac184bc846327f60c5b0d4247cc7a/500x500-000000-80-0-0.jpg",
+    "picture_xl": "https://e-cdns-images.dzcdn.net/images/artist/2ceac184bc846327f60c5b0d4247cc7a/1000x1000-000000-80-0-0.jpg",
+    "tracklist": "https://api.deezer.com/artist/11/top?limit=50"
+  }
+]

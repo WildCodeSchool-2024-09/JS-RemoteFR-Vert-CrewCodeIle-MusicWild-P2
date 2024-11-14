@@ -1,0 +1,49 @@
+[
+  {
+    "id": 6037380,
+    "title": "All Down The Line",
+    "preview": "https://cdn-preview-4.dzcdn.net/stream/c-45ffffa4f6aa514f3c054fabd04472f0-7.mp3"
+  },
+  {
+    "id": 6037362,
+    "title": "Tumbling Dice",
+    "preview": "https://cdn-preview-c.dzcdn.net/stream/c-c9e659cccb643583a84ff35d09878cfb-7.mp3"
+  },
+  {
+    "id": 6037364,
+    "title": "Pass The Wine (Sophia Loren)",
+    "preview": "https://cdn-preview-e.dzcdn.net/stream/c-e4b486f97a2b58c4b73895327b440080-6.mp3"
+  },
+  {
+    "id": 760429392,
+    "title": "Come Together (2019 Mix)",
+    "preview": "https://cdnt-preview.dzcdn.net/api/1/1/f/7/1/0/f718c1dd14514b54458d9ab3bd6495dd.mp3?hdnea=exp=1731602062~acl=/api/1/1/f/7/1/0/f718c1dd14514b54458d9ab3bd6495dd.mp3*~data=user_id=0,application_id=42~hmac=0ec5938de51c5ac181e9f643f22a999196920e24ed63378fbdd1ade78892977a"
+  },
+  {
+    "id": 760429402,
+    "title": "Something (2019 Mix)",
+    "preview": "https://cdnt-preview.dzcdn.net/api/1/1/4/5/d/0/45d352dc32f9c38916929c437ec69453.mp3?hdnea=exp=1731602062~acl=/api/1/1/4/5/d/0/45d352dc32f9c38916929c437ec69453.mp3*~data=user_id=0,application_id=42~hmac=9c6a20727787bada108cb6c97003300428f334c28fe1a65cc8ab69ce51cda63b"
+  },
+
+  {
+    "id": 760429412,
+    "title": "Maxwell's Silver Hammer (2019 Mix)",
+    "preview": "https://cdnt-preview.dzcdn.net/api/1/1/b/a/0/0/ba0877925b80ead61ff8a8977ba12493.mp3?hdnea=exp=1731602062~acl=/api/1/1/b/a/0/0/ba0877925b80ead61ff8a8977ba12493.mp3*~data=user_id=0,application_id=42~hmac=3b656804c1420d8278b9972ff72ff15a7efdceb6c89649d7b52ed089e180a23b"
+  },
+  {
+    "id": 15398875,
+    "title": "The Times They Are A-Changin'",
+    "preview": "https://cdnt-preview.dzcdn.net/api/1/1/3/a/6/0/3a6ea2699fd63537b013a1bd5c65569f.mp3?hdnea=exp=1731602319~acl=/api/1/1/3/a/6/0/3a6ea2699fd63537b013a1bd5c65569f.mp3*~data=user_id=0,application_id=42~hmac=b06d25b5681f5d8c2b41b67670f77cf7c2f6c8efe4a0074d340d2c83b70da1a5"
+  },
+  {
+    "id": 15398876,
+    "title": "Ballad of Hollis Brown",
+    "preview": "https://cdnt-preview.dzcdn.net/api/1/1/d/b/3/0/db369ced43a111c602a28ced109aa03c.mp3?hdnea=exp=1731602319~acl=/api/1/1/d/b/3/0/db369ced43a111c602a28ced109aa03c.mp3*~data=user_id=0,application_id=42~hmac=5111c1fad9f46deb92d84c2b9e00ae21e028baeb8c4345f5dc5721a4ce7e8be2"
+  },
+
+  {
+    "id": 15398877,
+    "title": "With God on Our Side",
+    "preview": "https://cdnt-preview.dzcdn.net/api/1/1/f/4/6/0/f46079dd4a90dcba78977a3b042b49fd.mp3?hdnea=exp=1731602319~acl=/api/1/1/f/4/6/0/f46079dd4a90dcba78977a3b042b49fd.mp3*~data=user_id=0,application_id=42~hmac=52071d8c38492f0bd498a5401d90a7e99a4d39e8bb3a89607e1934597e19431c"
+  }
+]

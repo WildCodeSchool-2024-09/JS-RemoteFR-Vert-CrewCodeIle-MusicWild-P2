@@ -7,9 +7,13 @@ export default function searchArtistCard({
 }: { artist: SearchArtistType }) {
   return (
     <>
-      <img src={artist.picture} alt={artist.name} />
-      <h1>{artist.name}</h1>
-      <h2>TrackList : {artist.tracklist}</h2>
+      <figure className="card">
+        <img src={artist.picture} alt={artist.name} />
+
+        <p>
+          <h1>{artist.name}</h1>
+        </p>
+      </figure>
     </>
   );
 }

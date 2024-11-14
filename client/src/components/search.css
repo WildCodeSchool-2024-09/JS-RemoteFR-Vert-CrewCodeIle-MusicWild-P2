@@ -41,6 +41,30 @@ button {
   color: white;
 }
 
-.fa-solid {
-  color: #ffffff;
+.cards {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.card {
+  border-radius: 10px;
+  width: 200px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+}
+
+.card h1 {
+  padding-left: 0.3rem;
+}
+
+.card a {
+  text-decoration: none;
+  padding-left: 0.3rem;
 }

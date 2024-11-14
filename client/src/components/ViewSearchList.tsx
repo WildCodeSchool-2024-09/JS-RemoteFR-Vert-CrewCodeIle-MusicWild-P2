@@ -23,7 +23,7 @@ export default function ViewSearchList() {
   }, [categorySearch, textSearch]);
   return (
     <>
-      <section>
+      <section className="cards">
         {artistList?.map((a: SearchArtistType) => (
           <SearchArtistCard artist={a} key={a.id} />
         ))}

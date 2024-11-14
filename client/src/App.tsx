@@ -1,31 +1,21 @@
 import { Outlet } from "react-router-dom";
 import "./App.css";
-import Search from "./components/Search";
 
+import "./App.css";
+import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
 function App() {
   return (
     <>
       <header>
-        <h1 className="logo">JS Monorepo</h1>
+        <NavBar />
       </header>
-
-      <nav className="navbar">
-        <Search />
-      </nav>
-      <main className="text-box">
+      <main>
+        <div className="hero" />
         <Outlet />
       </main>
-
       <footer>
-        Développé par la&nbsp;
-        <a
-          href="https://www.wildcodeschool.com/"
-          className="wcs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Wild Code School
-        </a>
+        <Footer />
       </footer>
     </>
   );

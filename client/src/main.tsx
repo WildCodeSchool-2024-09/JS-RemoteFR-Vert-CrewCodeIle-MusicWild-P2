@@ -7,7 +7,9 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
+//import AlbumsPage from "./pages/AlbumsPage";
 import HomePage from "./pages/HomePage";
+//import ArtistPage from "./pages/ArtistPage";
 import SearchPage from "./pages/SearchPage";
 
 // Import additional components for new routes
@@ -25,22 +27,29 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/", // The root path
+        path: "/",
         element: <HomePage />,
       },
+      {
+        path: "/artist",
+        element: <h2>ArtistPage </h2>,
+      },
+      {
+        path: "/albums",
+        element: <h2>AlbumsPage</h2>,
+      },
 
       {
-        path: "/SearchPage/:categorySearch/:textSearch", // The root path
+        path: "/SearchPage/:categorySearch/:textSearch",
         element: <SearchPage />,
       },
+
       {
         path: "*",
-        element: <h1 className="text-4xl text-center my-12">Error 404</h1>,
+        element: <h1>Error 404</h1>,
       },
     ],
-    // Renders the App component for the home page
   },
-
   // Try adding a new route! For example, "/about" with an About component
 ]);
 

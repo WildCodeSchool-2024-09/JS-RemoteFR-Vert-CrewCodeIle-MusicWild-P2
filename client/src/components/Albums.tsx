@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 type albumType = {
   id: string;
@@ -13,6 +14,12 @@ type albumType = {
 
 function Albums() {
   const [albums, setAlbums] = useState<albumType[]>([]);
+  const navigate = useNavigate();
+  const handleKeyUp = (event: { key: string }) => {
+    if (event.key === "Enter") {
+      alert("Touche Entrée pressée - Valider une action");
+    }
+  };
 
   useEffect(() => {
     fetch("http://localhost:3310/")
@@ -21,12 +28,19 @@ function Albums() {
       .catch((error) => console.error(error));
   }, []);
 
+  const handleClick = () => navigate("./albums/:id");
+
   return (
     <article className="albums">
       <h2 className="albumTitle">Albums du moment</h2>
       <div className="albumList">
         {albums.map((m) => (
-          <div key={m.id}>
+          <div
+            className="cover"
+            key={m.id}
+            onClick={handleClick}
+            onKeyUp={handleKeyUp}
+          >
             <img src={m.cover_medium} alt={`Cover de l'album ${m.title}`} />
             <h3>{m.title}</h3>
           </div>
@@ -37,10 +51,3 @@ function Albums() {
 }
 
 export default Albums;
-
-/* <p>{m.genre}</p>
-<audio controls src={m.preview}>
-<track kind="captions" />
-Play
-</audio>
-<button type="button">See more</button>*/

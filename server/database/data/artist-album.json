@@ -14,7 +14,6 @@
     "cover_medium": "https://e-cdns-images.dzcdn.net/images/cover/aa0f3b3819b356238dc46589e168e7bd/250x250-000000-80-0-0.jpg",
     "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/aa0f3b3819b356238dc46589e168e7bd/500x500-000000-80-0-0.jpg",
     "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/aa0f3b3819b356238dc46589e168e7bd/1000x1000-000000-80-0-0.jpg",
-    "genre_id": 152,
     "musicTitle": "All Down The Line",
     "preview": "https://cdn-preview-4.dzcdn.net/stream/c-45ffffa4f6aa514f3c054fabd04472f0-7.mp3"
   },
@@ -33,9 +32,8 @@
     "cover_medium": "https://e-cdns-images.dzcdn.net/images/cover/cb1291c76d83e54e03ea17e53df99cf2/250x250-000000-80-0-0.jpg",
     "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/cb1291c76d83e54e03ea17e53df99cf2/500x500-000000-80-0-0.jpg",
     "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/cb1291c76d83e54e03ea17e53df99cf2/1000x1000-000000-80-0-0.jpg",
-    "genre_id": 152,
-    "musicTitle": "Come Together (2019 Mix)",
-    "preview": "https://cdnt-preview.dzcdn.net/api/1/1/f/7/1/0/f718c1dd14514b54458d9ab3bd6495dd.mp3?hdnea=exp=1731602062~acl=/api/1/1/f/7/1/0/f718c1dd14514b54458d9ab3bd6495dd.mp3*~data=user_id=0,application_id=42~hmac=0ec5938de51c5ac181e9f643f22a999196920e24ed63378fbdd1ade78892977a"
+    "musicTitle": "Hey Jude",
+    "preview": "https://cdnt-preview.dzcdn.net/api/1/1/b/e/3/0/be3c33e5b05a25dc63b8951748615d74.mp3?hdnea=exp=1731626266~acl=/api/1/1/b/e/3/0/be3c33e5b05a25dc63b8951748615d74.mp3*~data=user_id=0,application_id=42~hmac=53a618523de750349b23fcf31fdd60b7d229a1697d2ebb2337cc5a35d088d229"
   },
   {
     "id": 808,
@@ -52,7 +50,7 @@
     "cover_medium": "https://e-cdns-images.dzcdn.net/images/cover/c06b153718d5f6982c1a8dc884461989/250x250-000000-80-0-0.jpg",
     "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/c06b153718d5f6982c1a8dc884461989/500x500-000000-80-0-0.jpg",
     "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/c06b153718d5f6982c1a8dc884461989/1000x1000-000000-80-0-0.jpg",
-    "genre_id": 152,
-    "musicTitle": "Ballad of Hollis Brown"
+    "musicTitle": "Knockin' On Heaven's Door",
+    "preview": "https://cdnt-preview.dzcdn.net/api/1/1/6/1/8/0/618937c6dbd9058114ae2fdad99bb2c1.mp3?hdnea=exp=1731625980~acl=/api/1/1/6/1/8/0/618937c6dbd9058114ae2fdad99bb2c1.mp3*~data=user_id=0,application_id=42~hmac=a9f50b51b31204e1b93a5f2a75b3e2ae2e903b0426b6c98df824f50308da7b51"
   }
 ]

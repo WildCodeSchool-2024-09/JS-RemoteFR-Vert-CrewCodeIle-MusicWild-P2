@@ -32,10 +32,17 @@ body {
 .navBarMW {
   display: grid;
   justify-items: center;
+  align-items: center;
 }
 .logoMW {
   width: 40%;
   margin-top: 1em;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .titleMW {
   visibility: hidden;
@@ -48,15 +55,13 @@ body {
 .navBarLink {
   display: flex;
   margin-left: 0.5em;
+  gap: 2em;
 }
 nav,
-li {
+li,
+a {
   text-decoration: none;
   list-style: none;
-  text-decoration-line: none;
-  text-decoration-thickness: none;
-  text-decoration-style: none;
-  text-decoration-color: none;
   gap: 0.5em;
 }
 .loupe {
@@ -96,6 +101,8 @@ li {
   padding-top: 1em;
   display: flex;
   justify-content: space-evenly;
+  bottom: 0;
+  width: 100%;
 }
 /*Format Desktop*/
 @media screen and (min-width: 992px) {
@@ -133,4 +140,7 @@ li {
   flex-direction: row;
   justify-content: space-evenly;
   margin-bottom: 2em;
+}
+.cover {
+  cursor: pointer;
 }

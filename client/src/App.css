@@ -16,7 +16,7 @@
   right: 0;
   bottom: 0;
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), #d372de),
-    url("../public/Images/bacground-with-logo.jpg");
+    url("./Images/bacground-with-logo.jpg");
   background-position: center;
   background-size: cover;
   z-index: -1;

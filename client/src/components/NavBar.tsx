@@ -6,12 +6,12 @@ function NavBar() {
       <div className="navBarMW">
         <img
           className="logoMW"
-          src="../../public/Images/logo-musiwild-without-text.png"
+          src="./Images/logo-musiwild-without-text.png"
           alt="logo du site MusicWild"
         />
         <img
           className="titleMW"
-          src="../../public/Images/MUSICWILD.png"
+          src="./Images/MUSICWILD.png"
           alt="Titre du site MusicWild"
         />
       </div>
@@ -34,7 +34,7 @@ function NavBar() {
           <input className="searchBar" type="text" />
           <img
             className="loupe"
-            src="../public/Images/loupe.png"
+            src="./Images/loupe.png"
             alt="représentation d'une loupe"
           />
         </form>

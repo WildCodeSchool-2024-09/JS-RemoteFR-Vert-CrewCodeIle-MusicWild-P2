@@ -23,7 +23,6 @@ input {
   margin: auto;
   width: fit-content;
   background-color: var(--prymary-color-bg);
-  /* border-radius: 0 10px 10px 0; */
   border-radius: 10px;
 }
 
@@ -66,6 +65,7 @@ button {
 
 .card h1 {
   padding-left: 0.3rem;
+  font-size: medium;
 }
 
 .card a {

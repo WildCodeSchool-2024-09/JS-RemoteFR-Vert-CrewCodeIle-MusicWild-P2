@@ -4,8 +4,6 @@ export default function SearchPage() {
   return (
     <>
       <ViewSearchList />
-
-      {/* Call component ViewSearch */}
     </>
   );
 }

@@ -7,12 +7,12 @@ function NavBar() {
       <div className="navBarMW">
         <img
           className="logoMW"
-          src="../../public/Images/logo-musiwild-without-text.png"
+          src="/images/logo-musiwild-without-text.png"
           alt="logo du site MusicWild"
         />
         <img
           className="titleMW"
-          src="../../public/Images/MUSICWILD.png"
+          src="/images/MUSICWILD.png"
           alt="Titre du site MusicWild"
         />
       </div>

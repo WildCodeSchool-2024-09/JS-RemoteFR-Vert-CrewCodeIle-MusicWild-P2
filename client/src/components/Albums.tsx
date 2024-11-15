@@ -37,10 +37,3 @@ function Albums() {
 }
 
 export default Albums;
-
-/* <p>{m.genre}</p>
-<audio controls src={m.preview}>
-<track kind="captions" />
-Play
-</audio>
-<button type="button">See more</button>*/

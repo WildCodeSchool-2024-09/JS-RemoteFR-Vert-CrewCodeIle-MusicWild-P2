@@ -111,11 +111,33 @@ router.post("/search", async (req, res) => {
 
   // Search by artist
 
-  const response = await fetch(
-    `https://api.deezer.com/search/artist?q=${textSearch}`,
-  );
-  const data = await response.json();
-  res.json(data);
+  if (categorySearch === "Artist") {
+    const response = await fetch(
+      `https://api.deezer.com/search/artist?q=${textSearch}`,
+    );
+    const data = await response.json();
+    res.json(data);
+  }
+
+  // Search by album
+
+  if (categorySearch === "Album") {
+    const response = await fetch(
+      `https://api.deezer.com/search/album?q=${textSearch}`,
+    );
+    const data = await response.json();
+    res.json(data);
+  }
+
+  // Search by Genre
+
+  if (categorySearch === "Genre") {
+    const response = await fetch(
+      `https://api.deezer.com/search?q=${textSearch}`,
+    );
+    const data = await response.json();
+    res.json(data);
+  }
 });
 
 /* ************************************************************************* */

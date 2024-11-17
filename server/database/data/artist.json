@@ -23,5 +23,21 @@
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/115/top?limit=50",
     "type": "artist"
+  },
+  {
+    "id": 705,
+    "name": "Muse",
+    "link": "https://www.deezer.com/artist/705",
+    "share": "https://www.deezer.com/artist/705?utm_source=deezer&utm_content=artist-705&utm_term=0_1731882943&utm_medium=web",
+    "picture": "https://api.deezer.com/artist/705/image",
+    "picture_small": "https://e-cdns-images.dzcdn.net/images/artist/cd7c5861be0009d3b75d4d3c069317a7/56x56-000000-80-0-0.jpg",
+    "picture_medium": "https://e-cdns-images.dzcdn.net/images/artist/cd7c5861be0009d3b75d4d3c069317a7/250x250-000000-80-0-0.jpg",
+    "picture_big": "https://e-cdns-images.dzcdn.net/images/artist/cd7c5861be0009d3b75d4d3c069317a7/500x500-000000-80-0-0.jpg",
+    "picture_xl": "https://e-cdns-images.dzcdn.net/images/artist/cd7c5861be0009d3b75d4d3c069317a7/1000x1000-000000-80-0-0.jpg",
+    "nb_album": 61,
+    "nb_fan": 4742564,
+    "radio": true,
+    "tracklist": "https://api.deezer.com/artist/705/top?limit=50",
+    "type": "artist"
   }
 ]

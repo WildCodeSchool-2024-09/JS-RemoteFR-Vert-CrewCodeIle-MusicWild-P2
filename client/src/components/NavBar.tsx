@@ -23,10 +23,10 @@ function NavBar() {
               <NavLink to={"/"}>Accueil</NavLink>
             </li>
             <li>
-              <NavLink to={"/albums"}>Albums</NavLink>
+              <NavLink to={"/artist"}>Artistes</NavLink>
             </li>
             <li>
-              <NavLink to={"/artist"}>Artistes</NavLink>
+              <NavLink to={"/albums"}>Albums</NavLink>
             </li>
           </ul>
         </nav>

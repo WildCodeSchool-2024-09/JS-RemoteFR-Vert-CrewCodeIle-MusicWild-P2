@@ -144,3 +144,26 @@ a {
 .cover {
   cursor: pointer;
 }
+/*AlbumDetails*/
+/*Format mobile*/
+.albumDetails {
+  margin-top: 1em;
+  text-align: center;
+}
+.albumPlay {
+  width: 100%;
+  margin-top: 2em;
+}
+audio {
+  width: 200px;
+}
+/*Format Desktop*/
+@media screen and (min-width: 992px) {
+  .albumPlay {
+    margin-top: 5em;
+    text-align: left;
+  }
+  audio {
+    width: 300px;
+  }
+}

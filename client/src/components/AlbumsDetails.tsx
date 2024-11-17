@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
-
+import { useParams } from "react-router-dom";
 type albumType = {
   id: string;
   name: string;
@@ -15,12 +15,13 @@ type albumType = {
 
 function AlbumsDetails() {
   const [review, setPreview] = useState<albumType[]>([]);
+  const { id } = useParams();
   useEffect(() => {
-    fetch("http://localhost:3310/")
+    fetch(`http://localhost:3310/albums/${id}`)
       .then((response) => response.json())
       .then((data) => setPreview(data))
       .catch((error) => console.error(error));
-  }, []);
+  }, [id]);
 
   return (
     <article>
@@ -31,7 +32,7 @@ function AlbumsDetails() {
             <track kind="captions" />
             Play
           </audio>
-          <h3>{p.musicTitle}</h3>
+          <h3>{p.title}</h3>
         </div>
       ))}
     </article>

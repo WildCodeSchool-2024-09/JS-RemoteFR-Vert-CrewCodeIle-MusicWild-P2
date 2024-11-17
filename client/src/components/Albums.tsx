@@ -22,13 +22,13 @@ function Albums() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3310/")
+    fetch("http://localhost:3310/albums")
       .then((response) => response.json())
       .then((data) => setAlbums(data))
       .catch((error) => console.error(error));
   }, []);
 
-  const handleClick = () => navigate("./albums/:id");
+  const handleClick = (id: string) => navigate(`/albums/${id}`);
 
   return (
     <article className="albums">
@@ -38,7 +38,7 @@ function Albums() {
           <div
             className="cover"
             key={m.id}
-            onClick={handleClick}
+            onClick={() => handleClick(m.id)}
             onKeyUp={handleKeyUp}
           >
             <img src={m.cover_medium} alt={`Cover de l'album ${m.title}`} />

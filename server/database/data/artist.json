@@ -7,5 +7,21 @@
     "picture_big": "https://e-cdns-images.dzcdn.net/images/artist/2ceac184bc846327f60c5b0d4247cc7a/500x500-000000-80-0-0.jpg",
     "picture_xl": "https://e-cdns-images.dzcdn.net/images/artist/2ceac184bc846327f60c5b0d4247cc7a/1000x1000-000000-80-0-0.jpg",
     "tracklist": "https://api.deezer.com/artist/11/top?limit=50"
+  },
+  {
+    "id": 115,
+    "name": "AC/DC",
+    "link": "https://www.deezer.com/artist/115",
+    "share": "https://www.deezer.com/artist/115?utm_source=deezer&utm_content=artist-115&utm_term=0_1731868702&utm_medium=web",
+    "picture": "https://api.deezer.com/artist/115/image",
+    "picture_small": "https://e-cdns-images.dzcdn.net/images/artist/ad61d6e0fa724d880db979c9ac8cc5e3/56x56-000000-80-0-0.jpg",
+    "picture_medium": "https://e-cdns-images.dzcdn.net/images/artist/ad61d6e0fa724d880db979c9ac8cc5e3/250x250-000000-80-0-0.jpg",
+    "picture_big": "https://e-cdns-images.dzcdn.net/images/artist/ad61d6e0fa724d880db979c9ac8cc5e3/500x500-000000-80-0-0.jpg",
+    "picture_xl": "https://e-cdns-images.dzcdn.net/images/artist/ad61d6e0fa724d880db979c9ac8cc5e3/1000x1000-000000-80-0-0.jpg",
+    "nb_album": 27,
+    "nb_fan": 9250250,
+    "radio": true,
+    "tracklist": "https://api.deezer.com/artist/115/top?limit=50",
+    "type": "artist"
   }
 ]

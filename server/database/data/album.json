@@ -1,32 +1,26 @@
 [
   {
-    "id": 551306,
-    "title": "Exile On Main Street (Deluxe Version)",
-    "cover_small": "https://e-cdns-images.dzcdn.net/images/cover/aa0f3b3819b356238dc46589e168e7bd/56x56-000000-80-0-0.jpg",
-    "cover_medium": "https://e-cdns-images.dzcdn.net/images/cover/aa0f3b3819b356238dc46589e168e7bd/250x250-000000-80-0-0.jpg",
-    "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/aa0f3b3819b356238dc46589e168e7bd/500x500-000000-80-0-0.jpg",
-    "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/aa0f3b3819b356238dc46589e168e7bd/1000x1000-000000-80-0-0.jpg",
-    "genre_id": 152,
-    "genres_name": "Rock"
+    "id": 11,
+    "title": "Exile On Main Street (2010 Re-Mastered)",
+    "cover": "https://api.deezer.com/album/543353/image",
+    "cover_small": "https://e-cdns-images.dzcdn.net/images/cover/28e5ea6c9e305a2cb85a589b1260a88a/56x56-000000-80-0-0.jpg",
+    "cover_medium": "https://e-cdns-images.dzcdn.net/images/cover/28e5ea6c9e305a2cb85a589b1260a88a/250x250-000000-80-0-0.jpg",
+    "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/28e5ea6c9e305a2cb85a589b1260a88a/500x500-000000-80-0-0.jpg",
+    "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/28e5ea6c9e305a2cb85a589b1260a88a/1000x1000-000000-80-0-0.jpg",
+    "md5_image": "28e5ea6c9e305a2cb85a589b1260a88a",
+    "tracklist": "https://api.deezer.com/album/543353/tracks",
+    "type": "album"
   },
   {
-    "id": 112126942,
-    "title": "Abbey Road (Super Deluxe Edition)",
-    "cover_small": "https://e-cdns-images.dzcdn.net/images/cover/cb1291c76d83e54e03ea17e53df99cf2/56x56-000000-80-0-0.jpg",
-    "cover_medium": "https://e-cdns-images.dzcdn.net/images/cover/cb1291c76d83e54e03ea17e53df99cf2/250x250-000000-80-0-0.jpg",
-    "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/cb1291c76d83e54e03ea17e53df99cf2/500x500-000000-80-0-0.jpg",
-    "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/cb1291c76d83e54e03ea17e53df99cf2/1000x1000-000000-80-0-0.jpg",
-    "genre_id": 152,
-    "genres_name": "Rock"
-  },
-  {
-    "id": 1422098,
-    "title": "The Times They Are A-Changin'",
-    "cover_small": "https://e-cdns-images.dzcdn.net/images/cover/c06b153718d5f6982c1a8dc884461989/56x56-000000-80-0-0.jpg",
-    "cover_medium": "https://e-cdns-images.dzcdn.net/images/cover/c06b153718d5f6982c1a8dc884461989/250x250-000000-80-0-0.jpg",
-    "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/c06b153718d5f6982c1a8dc884461989/500x500-000000-80-0-0.jpg",
-    "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/c06b153718d5f6982c1a8dc884461989/1000x1000-000000-80-0-0.jpg",
-    "genre_id": 152,
-    "genres_name": "Rock"
+    "id": 1,
+    "title": "Highway to Hell",
+    "cover": "https://api.deezer.com/album/9410086/image",
+    "cover_small": "https://e-cdns-images.dzcdn.net/images/cover/de48d988a82fc401f4b9bafc2639f7d0/56x56-000000-80-0-0.jpg",
+    "cover_medium": "https://e-cdns-images.dzcdn.net/images/cover/de48d988a82fc401f4b9bafc2639f7d0/250x250-000000-80-0-0.jpg",
+    "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/de48d988a82fc401f4b9bafc2639f7d0/500x500-000000-80-0-0.jpg",
+    "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/de48d988a82fc401f4b9bafc2639f7d0/1000x1000-000000-80-0-0.jpg",
+    "md5_image": "de48d988a82fc401f4b9bafc2639f7d0",
+    "tracklist": "https://api.deezer.com/album/9410086/tracks",
+    "type": "album"
   }
 ]

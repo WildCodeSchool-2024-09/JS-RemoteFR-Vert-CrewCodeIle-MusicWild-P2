@@ -3,6 +3,7 @@
   --main-color: #a306b6;
   --secondary-color: #ffffff;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +18,20 @@
   bottom: 0;
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), #d372de),
     url("./Images/bacground-with-logo.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* Section Hero en background */
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), #d372de),
+    url("../public/Images/bacground-with-logo.jpg");
   background-position: center;
   background-size: cover;
   z-index: -1;

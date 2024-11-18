@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import Search from "./Search";
 
 function NavBar() {
   return (
@@ -6,12 +7,12 @@ function NavBar() {
       <div className="navBarMW">
         <img
           className="logoMW"
-          src="./Images/logo-musiwild-without-text.png"
+          src="/images/logo-musiwild-without-text.png"
           alt="logo du site MusicWild"
         />
         <img
           className="titleMW"
-          src="./Images/MUSICWILD.png"
+          src="/images/MUSICWILD.png"
           alt="Titre du site MusicWild"
         />
       </div>
@@ -23,21 +24,14 @@ function NavBar() {
               <NavLink to={"/"}>Accueil</NavLink>
             </li>
             <li>
-              <NavLink to={"/artist"}>Artistes</NavLink>
+              <NavLink to={"/albums"}>Albums</NavLink>
             </li>
             <li>
-              <NavLink to={"/albums"}>Albums</NavLink>
+              <NavLink to={"/artist"}>Artistes</NavLink>
             </li>
           </ul>
         </nav>
-        <form className="search">
-          <input className="searchBar" type="text" />
-          <img
-            className="loupe"
-            src="./Images/loupe.png"
-            alt="représentation d'une loupe"
-          />
-        </form>
+        <Search />
       </div>
     </>
   );

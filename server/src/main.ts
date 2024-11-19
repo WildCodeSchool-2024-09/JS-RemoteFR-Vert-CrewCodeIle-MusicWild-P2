@@ -8,6 +8,18 @@ import "../database/checkConnection";
 
 // Import the Express application from ./app
 import app from "./app";
+app.get("/", async (req, res) => {
+  const data = require("../database/data/artist.json");
+  res.json(data);
+});
+app.get("/albums", async (req, res) => {
+  const data = require("../database/data/album.json");
+  res.json(data);
+});
+app.get("/albums/:id", async (req, res) => {
+  const data = require("../database/data/tracklist.json");
+  res.json(data.filter((i: { id: number }) => i.id === Number(req.params.id)));
+});
 
 // Get the port from the environment variables
 const port = process.env.APP_PORT;

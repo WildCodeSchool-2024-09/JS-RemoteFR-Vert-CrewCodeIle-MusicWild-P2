@@ -1,0 +1,38 @@
+[
+  {
+    "id": 11,
+    "title": "Exile On Main Street (2010 Re-Mastered)",
+    "cover": "https://api.deezer.com/album/543353/image",
+    "cover_small": "https://e-cdns-images.dzcdn.net/images/cover/28e5ea6c9e305a2cb85a589b1260a88a/56x56-000000-80-0-0.jpg",
+    "cover_medium": "https://e-cdns-images.dzcdn.net/images/cover/28e5ea6c9e305a2cb85a589b1260a88a/250x250-000000-80-0-0.jpg",
+    "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/28e5ea6c9e305a2cb85a589b1260a88a/500x500-000000-80-0-0.jpg",
+    "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/28e5ea6c9e305a2cb85a589b1260a88a/1000x1000-000000-80-0-0.jpg",
+    "md5_image": "28e5ea6c9e305a2cb85a589b1260a88a",
+    "tracklist": "https://api.deezer.com/album/543353/tracks",
+    "type": "album"
+  },
+  {
+    "id": 115,
+    "title": "Highway to Hell",
+    "cover": "https://api.deezer.com/album/9410086/image",
+    "cover_small": "https://e-cdns-images.dzcdn.net/images/cover/de48d988a82fc401f4b9bafc2639f7d0/56x56-000000-80-0-0.jpg",
+    "cover_medium": "https://e-cdns-images.dzcdn.net/images/cover/de48d988a82fc401f4b9bafc2639f7d0/250x250-000000-80-0-0.jpg",
+    "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/de48d988a82fc401f4b9bafc2639f7d0/500x500-000000-80-0-0.jpg",
+    "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/de48d988a82fc401f4b9bafc2639f7d0/1000x1000-000000-80-0-0.jpg",
+    "md5_image": "de48d988a82fc401f4b9bafc2639f7d0",
+    "tracklist": "https://api.deezer.com/album/9410086/tracks",
+    "type": "album"
+  },
+  {
+    "id": 705,
+    "title": "Origin of Symmetry",
+    "cover": "https://api.deezer.com/album/1248725/image",
+    "cover_small": "https://e-cdns-images.dzcdn.net/images/cover/d51fca27f4e6f891e64eaab425264fce/56x56-000000-80-0-0.jpg",
+    "cover_medium": "https://e-cdns-images.dzcdn.net/images/cover/d51fca27f4e6f891e64eaab425264fce/250x250-000000-80-0-0.jpg",
+    "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/d51fca27f4e6f891e64eaab425264fce/500x500-000000-80-0-0.jpg",
+    "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/d51fca27f4e6f891e64eaab425264fce/1000x1000-000000-80-0-0.jpg",
+    "md5_image": "d51fca27f4e6f891e64eaab425264fce",
+    "tracklist": "https://api.deezer.com/album/1248725/tracks",
+    "type": "album"
+  }
+]

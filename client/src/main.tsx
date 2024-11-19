@@ -11,6 +11,7 @@ import AlbumsDetails from "./components/AlbumsDetails";
 import AlbumsPage from "./pages/AlbumsPage";
 import ArtistPage from "./pages/ArtistPage";
 import HomePage from "./pages/HomePage";
+import NewsPage from "./pages/NewsPage";
 import SearchPage from "./pages/SearchPage";
 // Try creating these components in the "pages" folder
 
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/SearchPage/:categorySearch/:textSearch",
         element: <SearchPage />,
+      },
+      {
+        path: "/news",
+        element: <NewsPage />,
       },
       {
         path: "*",

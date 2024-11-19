@@ -78,6 +78,7 @@ a {
   text-decoration: none;
   list-style: none;
   gap: 0.5em;
+  color: #551a8b;
 }
 .loupe {
   height: 25px;

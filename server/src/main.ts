@@ -24,6 +24,10 @@ app.get("/albums/:id", async (req, res) => {
     ),
   );
 });
+app.get("/news", async (req, res) => {
+  const data = require("../database/data/news.json");
+  res.json(data);
+});
 
 // Get the port from the environment variables
 const port = process.env.APP_PORT;

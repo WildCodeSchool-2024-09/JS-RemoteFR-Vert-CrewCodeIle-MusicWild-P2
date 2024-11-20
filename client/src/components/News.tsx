@@ -30,13 +30,19 @@ function News() {
 
   return (
     <article className="news">
-      <h2>Nouveautés</h2>
-      {news.map((n) => (
-        <div key={n.id} onClick={() => handleClick(n.id)} onKeyUp={handleKeyUp}>
-          <img src={n.cover} alt={n.name} />
-          <h3>{n.name}</h3>
-        </div>
-      ))}
+      <h2 className="newsTitle">Nouveautés</h2>
+      <div className="newsList">
+        {news.map((n) => (
+          <div
+            key={n.id}
+            onClick={() => handleClick(n.id)}
+            onKeyUp={handleKeyUp}
+          >
+            <img className="newsCover" src={n.cover_medium} alt={n.name} />
+            <h3>{n.title}</h3>
+          </div>
+        ))}
+      </div>
     </article>
   );
 }

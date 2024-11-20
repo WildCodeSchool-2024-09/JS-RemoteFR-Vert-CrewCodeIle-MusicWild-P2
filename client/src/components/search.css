@@ -80,10 +80,20 @@ button {
 }
 
 .track {
-  margin-top: 10px;
-  border: 2px solid black;
-  background-color: #a306b633;
-  display: grid;
+  padding: 0.4rem;
+  border-radius: 10px 30px 30px 10px;
+  width: 40%;
+  margin: 0.3rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: var(--2d-color-bg);
   gap: 1rem;
+}
+
+.track h2 {
+  padding-left: 0.3rem;
+  font-size: medium;
 }

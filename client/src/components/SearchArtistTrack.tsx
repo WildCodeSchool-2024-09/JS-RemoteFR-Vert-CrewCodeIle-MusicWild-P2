@@ -26,7 +26,7 @@ export default function SearchArtistTrack() {
       <section className="trackList">
         {track?.map((track: SearchArtistTrackType) => (
           <article key={track.id} className="track">
-            <span>{track.title}</span>
+            <h2>{track.title}</h2>
             <span>
               <audio controls src={track.preview}>
                 <track kind="captions" />

@@ -39,7 +39,7 @@
     "explicit_lyrics": false,
     "explicit_content_lyrics": 0,
     "explicit_content_cover": 0,
-    "preview": "https://cdnt-preview.dzcdn.net/api/1/1/f/1/a/0/f1ad924fd4249986aef87f5bd3a278dc.mp3?hdnea=exp=1731872663~acl=/api/1/1/f/1/a/0/f1ad924fd4249986aef87f5bd3a278dc.mp3*~data=user_id=0,application_id=42~hmac=116a9008f9aaa2fa6a0572c1c3fa85cd87d31da1ec43489de9f45a449bbdb147",
+    "preview": "https://cdnt-preview.dzcdn.net/api/1/1/f/1/a/0/f1ad924fd4249986aef87f5bd3a278dc.mp3",
     "md5_image": "28e5ea6c9e305a2cb85a589b1260a88a",
     "artist": {
       "id": 11,

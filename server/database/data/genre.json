@@ -3,5 +3,20 @@
     "id": 152,
     "name": "Rock",
     "picture": "https://api.deezer.com/genre/152/image"
+  },
+  {
+    "id": 200,
+    "name": "Pop",
+    "picture": "https://api.deezer.com/genre/152/image"
+  },
+  {
+    "id": 241,
+    "name": "Soul",
+    "picture": "https://api.deezer.com/genre/152/image"
+  },
+  {
+    "id": 150,
+    "name": "Jazz",
+    "picture": "https://api.deezer.com/genre/152/image"
   }
 ]

@@ -29,6 +29,9 @@ function NavBar() {
             <li>
               <NavLink to={"/artist"}>Artistes</NavLink>
             </li>
+            <li>
+              <NavLink to={"/catalog"}>Catalogue</NavLink>
+            </li>
           </ul>
         </nav>
         <Search />

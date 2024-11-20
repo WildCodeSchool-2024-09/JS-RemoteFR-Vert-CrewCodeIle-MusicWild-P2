@@ -7,12 +7,12 @@ function NavBar() {
       <div className="navBarMW">
         <img
           className="logoMW"
-          src="/images/logo-musiwild-without-text.png"
+          src="/Images/logo-musiwild-without-text.png"
           alt="logo du site MusicWild"
         />
         <img
           className="titleMW"
-          src="/images/MUSICWILD.png"
+          src="/Images/MUSICWILD.png"
           alt="Titre du site MusicWild"
         />
       </div>
@@ -30,8 +30,10 @@ function NavBar() {
               <NavLink to={"/artist"}>Artistes</NavLink>
             </li>
           </ul>
+          <div>
+            <Search />
+          </div>
         </nav>
-        <Search />
       </div>
     </>
   );

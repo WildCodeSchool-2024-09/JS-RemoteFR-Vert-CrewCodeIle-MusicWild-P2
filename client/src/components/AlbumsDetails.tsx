@@ -39,7 +39,7 @@ function AlbumsDetails() {
         </thead>
         <tbody>
           {review.map((p) => (
-            <tr key={p.id}>
+            <tr key={p.title}>
               <td>{p.track_position}</td>
               <td>{p.title}</td>
               <td>{p.duration} sec</td>

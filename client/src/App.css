@@ -9,6 +9,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Section Hero en background */
 .hero {
   position: absolute;
@@ -49,29 +50,35 @@ body {
   justify-items: center;
   align-items: center;
 }
+
 .logoMW {
   width: 40%;
   margin-top: 1em;
 }
+
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
 }
+
 .titleMW {
   visibility: hidden;
 }
+
 .listAndSearch {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
+
 .navBarLink {
   display: flex;
   margin-left: 0.5em;
   gap: 2em;
 }
+
 nav,
 li,
 a {
@@ -79,12 +86,14 @@ a {
   list-style: none;
   gap: 0.5em;
 }
+
 .loupe {
   height: 25px;
   width: 25px;
   position: absolute;
   transform: translateX(-120%) translateY(15%);
 }
+
 .searchBar {
   padding: 0.7em 7em;
   border: 0.5px solid black;
@@ -97,10 +106,12 @@ a {
     display: flex;
     justify-content: center;
   }
+
   .logoMW {
     width: 20%;
     margin-top: 1em;
   }
+
   .titleMW {
     visibility: visible;
     height: 20%;
@@ -119,6 +130,7 @@ a {
   bottom: 0;
   width: 100%;
 }
+
 /*Format Desktop*/
 @media screen and (min-width: 992px) {
   .footerClass {
@@ -132,52 +144,64 @@ a {
 .artists {
   text-align: center;
 }
+
 .artistTitle {
   margin: 2em 2em;
 }
+
 .artistList {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
+
 .artistPictures {
   border-radius: 100%;
 }
+
 /*Album*/
 .albums {
   text-align: center;
 }
+
 .albumTitle {
   margin: 2em 2em;
 }
+
 .albumList {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   margin-bottom: 2em;
 }
+
 .cover {
   cursor: pointer;
 }
+
 /*AlbumDetails*/
 /*Format mobile*/
 .albumDetails {
   margin-top: 1em;
   text-align: center;
 }
+
 .albumPlay {
   width: 100%;
   margin-top: 2em;
 }
+
 audio {
   width: 200px;
 }
+
 /*Format Desktop*/
 @media screen and (min-width: 992px) {
   .albumPlay {
     margin-top: 5em;
     text-align: left;
   }
+
   audio {
     width: 300px;
   }

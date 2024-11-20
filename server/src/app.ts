@@ -140,6 +140,15 @@ router.post("/search", async (req, res) => {
   }
 });
 
+router.post("/search/artist/track/", async (req, res) => {
+  const { id } = req.body;
+  const response = await fetch(
+    `https://api.deezer.com/artist/${id}/top?limit=10`,
+  );
+  const data = await response.json();
+  res.json(data);
+});
+
 /* ************************************************************************* */
 
 // Middleware for Error Logging

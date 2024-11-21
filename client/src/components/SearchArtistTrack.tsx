@@ -21,11 +21,20 @@ export default function SearchArtistTrack() {
       .then((data) => setTrack(data.data))
       .catch((error) => console.error(error));
   }, [id]);
+
   return (
     <>
       <section className="trackList">
+        <h1>Extraits musicaux</h1>
+        <figure className="introduction">
+          {track[0] != null && (
+            <img src={track[0].album.cover_medium} alt={track[0].artist.name} />
+          )}
+          <span>{track[0] != null && <h2>{track[0].artist.name}</h2>}</span>
+        </figure>
         {track?.map((track: SearchArtistTrackType) => (
           <article key={track.id} className="track">
+            <img src={track.contributors[0].picture_small} alt="" />
             <h2>{track.title}</h2>
             <span>
               <audio controls src={track.preview}>

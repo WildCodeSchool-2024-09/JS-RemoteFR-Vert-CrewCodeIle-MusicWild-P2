@@ -25,7 +25,6 @@ export default function searchArtistCard({
           onClick={handleOnClick}
           onKeyUp={handleKeyUp}
         />
-
         <p>
           <h1>{artist.name}</h1>
         </p>

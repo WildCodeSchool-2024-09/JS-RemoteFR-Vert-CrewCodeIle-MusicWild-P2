@@ -85,6 +85,7 @@ a {
   text-decoration: none;
   list-style: none;
   gap: 0.5em;
+  color: #551a8b;
 }
 
 .loupe {
@@ -158,24 +159,25 @@ a {
 .artistPictures {
   border-radius: 100%;
 }
-
-/*Album*/
-.albums {
+/*Album and News*/
+.albums,
+.news {
   text-align: center;
 }
 
-.albumTitle {
+.albumTitle,
+.newsTitle {
   margin: 2em 2em;
 }
-
-.albumList {
+.albumList,
+.newsList {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   margin-bottom: 2em;
 }
-
-.cover {
+.cover,
+.newsCover {
   cursor: pointer;
 }
 

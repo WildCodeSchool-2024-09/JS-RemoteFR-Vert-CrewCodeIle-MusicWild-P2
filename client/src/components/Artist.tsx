@@ -1,21 +1,25 @@
 import { useEffect, useState } from "react";
-
-type artistType = {
-  id: string;
-  name: string;
-  picture: string;
-  genre: string;
-  preview: string;
-};
+import { useNavigate } from "react-router-dom";
+import type { artistType } from "../types/artistType";
 
 function Artist() {
+  const VITE_API_URL_ARTIST = import.meta.env.VITE_API_URL_ARTIST;
   const [artist, setArtist] = useState<artistType[]>([]);
+  const navigate = useNavigate();
+  const handleKeyUp = (event: { key: string }) => {
+    if (event.key === "Enter") {
+      alert("Touche Entrée pressée - Valider une action");
+    }
+  };
+
   useEffect(() => {
-    fetch("http://localhost:3310/")
+    fetch(VITE_API_URL_ARTIST)
       .then((response) => response.json())
       .then((data) => setArtist(data))
       .catch((error) => console.error(error));
   }, []);
+
+  const handleClick = (id: number) => navigate(`/artist/${id}`);
 
   return (
     <article className="artists">
@@ -23,7 +27,11 @@ function Artist() {
       <div className="artistList">
         {artist
           ? artist.map((a) => (
-              <div key={a.id}>
+              <div
+                key={a.id}
+                onClick={() => handleClick(a.id)}
+                onKeyUp={handleKeyUp}
+              >
                 <img
                   className="artistPictures"
                   src={a.picture}

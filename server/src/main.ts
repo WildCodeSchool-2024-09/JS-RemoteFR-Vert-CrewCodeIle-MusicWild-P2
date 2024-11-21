@@ -25,7 +25,11 @@ app.get("/artist/:id", async (req, res) => {
 });
 app.get("/albums/:id", async (req, res) => {
   const data = require("../database/data/tracklist.json");
-  res.json(data.filter((i: { id: number }) => i.id === Number(req.params.id)));
+  res.json(
+    data.filter(
+      (i: { album_id: number }) => i.album_id === Number(req.params.id),
+    ),
+  );
 });
 
 // Get the port from the environment variables

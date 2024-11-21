@@ -61,6 +61,7 @@ button {
   flex-direction: column;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-color: var(--2d-color-bg);
+  cursor: pointer;
 }
 
 .card h1 {
@@ -71,4 +72,18 @@ button {
 .card a {
   text-decoration: none;
   padding-left: 0.3rem;
+}
+
+.trackList {
+  margin-top: 10px;
+  display: grid;
+}
+
+.track {
+  margin-top: 10px;
+  border: 2px solid black;
+  background-color: #a306b633;
+  display: grid;
+  align-items: center;
+  gap: 1rem;
 }

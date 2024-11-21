@@ -21,7 +21,7 @@ function AlbumsDetails() {
   useEffect(() => {
     fetch(`http://localhost:3310/albums/${id}`)
       .then((response) => response.json())
-      .then((data) => setPreview(data))
+      .then((data) => setPreview(data.data))
       .catch((error) => console.error(error));
   }, [id]);
 

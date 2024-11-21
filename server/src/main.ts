@@ -17,12 +17,11 @@ app.get("/albums", async (req, res) => {
   res.json(data);
 });
 app.get("/albums/:id", async (req, res) => {
-  const data = require("../database/data/tracklist.json");
-  res.json(
-    data.filter(
-      (i: { album_id: number }) => i.album_id === Number(req.params.id),
-    ),
+  const response = await fetch(
+    `https://api.deezer.com/album/${req.params.id}/tracks`,
   );
+  const data = await response.json();
+  res.json(data);
 });
 app.get("/news", async (req, res) => {
   const data = require("../database/data/news.json");

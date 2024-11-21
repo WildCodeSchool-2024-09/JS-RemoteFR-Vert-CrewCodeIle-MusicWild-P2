@@ -19,9 +19,9 @@ function News() {
       alert("Touche Entrée pressée - Valider une action");
     }
   };
-
+  const VITE_API_NEWS = import.meta.env.VITE_API_NEWS;
   useEffect(() => {
-    fetch("http://localhost:3310/news")
+    fetch(VITE_API_NEWS)
       .then((response) => response.json())
       .then((data) => setNews(data))
       .catch((error) => console.error(error));

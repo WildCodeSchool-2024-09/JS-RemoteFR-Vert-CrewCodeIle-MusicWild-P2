@@ -20,9 +20,9 @@ function Albums() {
       alert("Touche Entrée pressée - Valider une action");
     }
   };
-
+  const VITE_API_ALBUMS = import.meta.env.VITE_API_ALBUMS;
   useEffect(() => {
-    fetch("http://localhost:3310/albums")
+    fetch(VITE_API_ALBUMS)
       .then((response) => response.json())
       .then((data) => setAlbums(data))
       .catch((error) => console.error(error));

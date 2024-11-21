@@ -29,24 +29,59 @@ function Albums() {
   }, []);
 
   const handleClick = (id: string) => navigate(`/albums/${id}`);
+  const [index, setIndex] = useState<number>(0);
+
+  const handlePrec = () => {
+    if (index < 0) {
+      setIndex((p) => p - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (index < albums.length) {
+      setIndex((n) => n + 1);
+    }
+  };
 
   return (
-    <article className="albums">
+    <>
       <h2 className="albumTitle">Albums du moment</h2>
-      <div className="albumList">
-        {albums.map((m) => (
-          <div
-            className="cover"
-            key={m.id}
-            onClick={() => handleClick(m.id)}
-            onKeyUp={handleKeyUp}
-          >
-            <img src={m.cover_medium} alt={`Cover de l'album ${m.title}`} />
-            <h3>{m.title}</h3>
-          </div>
-        ))}
+      <div className="carousel">
+        <button
+          type="button"
+          className="carousel-btn-prec"
+          onClick={handlePrec}
+        >
+          &lt;
+        </button>
+        <div className="carousel-container">
+          <ul className="carousel-card">
+            {albums.map((m) => (
+              <li
+                className="carousel-slide"
+                key={m.id}
+                onClick={() => handleClick(m.id)}
+                onKeyUp={handleKeyUp}
+              >
+                <img
+                  className="carousel-image"
+                  src={m.cover_medium}
+                  alt={`Cover de l'album ${m.title}`}
+                />
+                <h3>{m.title}</h3>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <button
+          type="button"
+          className="carousel-btn-next"
+          onClick={handleNext}
+        >
+          &gt;
+        </button>
       </div>
-    </article>
+    </>
   );
 }
 

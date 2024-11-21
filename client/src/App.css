@@ -165,20 +165,80 @@ a {
   text-align: center;
 }
 
-.albumTitle,
 .newsTitle {
   margin: 2em 2em;
 }
-.albumList,
 .newsList {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   margin-bottom: 2em;
 }
-.cover,
 .newsCover {
   cursor: pointer;
+}
+/*Carousel creation*/
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+
+.carousel-container {
+  width: 100%;
+}
+
+.carousel-card {
+  display: flex;
+  gap: 1em;
+  transition: transform 0.5s;
+}
+
+.carousel-slide {
+  flex: 0 0 auto;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.carousel-image {
+  width: 100%;
+  border-radius: 10%;
+  transition: transform 0.3s;
+}
+
+.carousel-image:hover {
+  transform: scale(1.1);
+}
+
+.carousel-btn-prec {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  border-radius: 50%;
+  left: 1em;
+  background-color: #ffffff;
+  color: #551a8b;
+  width: 3em;
+  height: 3em;
+  transform: translateY(-130%);
+  z-index: 10;
+}
+
+.carousel-btn-next {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  border-radius: 50%;
+  right: 1em;
+  background-color: #ffffff;
+  color: #551a8b;
+  width: 3em;
+  height: 3em;
+  transform: translateY(-130%);
+  z-index: 10;
 }
 
 /*AlbumDetails*/

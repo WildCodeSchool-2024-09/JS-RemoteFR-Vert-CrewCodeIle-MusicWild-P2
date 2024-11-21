@@ -4,10 +4,12 @@ import { useParams } from "react-router-dom";
 import type { artistType } from "../types/artistType";
 
 function ArtistsDetails() {
+  const VITE_API_URL_ARTIST_DETAILS = import.meta.env
+    .VITE_API_URL_ARTIST_DETAILS;
   const [artist, setArtist] = useState<artistType[]>([]);
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:3310/artist/${id}`)
+    fetch(VITE_API_URL_ARTIST_DETAILS`${id}`)
       .then((response) => response.json())
       .then((data) => setArtist(data))
       .catch((error) => console.error(error));

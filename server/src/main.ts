@@ -1,5 +1,6 @@
 // Load environment variables from .env file
 import "dotenv/config";
+import app from "./app";
 
 // Check database connection
 // Note: This is optional and can be removed if the database connection
@@ -7,7 +8,6 @@ import "dotenv/config";
 import "../database/checkConnection";
 
 // Import the Express application from ./app
-import app from "./app";
 app.get("/artist", async (req, res) => {
   const data = require("../database/data/artist.json");
   res.json(data);

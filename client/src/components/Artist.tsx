@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import type { artistType } from "../types/artistType";
 
 function Artist() {
+  const VITE_API_URL_ARTIST = import.meta.env.VITE_API_URL_ARTIST;
   const [artist, setArtist] = useState<artistType[]>([]);
   const navigate = useNavigate();
   const handleKeyUp = (event: { key: string }) => {
@@ -12,7 +13,7 @@ function Artist() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3310/artist")
+    fetch(VITE_API_URL_ARTIST)
       .then((response) => response.json())
       .then((data) => setArtist(data))
       .catch((error) => console.error(error));

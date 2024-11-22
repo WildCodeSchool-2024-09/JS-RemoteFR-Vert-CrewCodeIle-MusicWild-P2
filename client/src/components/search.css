@@ -7,6 +7,7 @@
 :root {
   --prymary-color-bg: #e955bd;
   --2d-color-bg: white;
+  --font-default: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 input {
@@ -86,7 +87,7 @@ button {
 .trackList h1 {
   padding: 1rem;
   font-size: 36px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: var(--font-default);
   width: 100%;
   margin: auto;
   text-align: center;
@@ -121,11 +122,50 @@ button {
   background-color: var(--2d-color-bg);
   padding: 0.4rem;
   border-radius: 10px;
-  background-color: #ecdbdb;
+  background-color: #ebebeb;
 }
 
 .introduction span h2 {
   padding-left: 0.5rem;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: var(--font-default);
   font-size: 36px;
+}
+
+.detailsArtist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1px;
+}
+
+.buttonAlbums {
+  border: none;
+  border-radius: 15px;
+  height: 2.1rem;
+  background-color: var(--prymary-color-bg);
+  width: 6rem;
+  padding: 1px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  color: var(--2d-color-bg);
+  cursor: pointer;
+  font-family: var(--font-default);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.returnList {
+  border: none;
+  border-radius: 15px;
+  height: 2.1rem;
+  background-color: var(--prymary-color-bg);
+  width: fit-content;
+  padding-left: 1em;
+  padding-right: 1rem;
+  margin: 5px;
+  color: var(--2d-color-bg);
+  cursor: pointer;
+  font-family: var(--font-default);
+  font-size: 18px;
+  font-weight: bold;
 }

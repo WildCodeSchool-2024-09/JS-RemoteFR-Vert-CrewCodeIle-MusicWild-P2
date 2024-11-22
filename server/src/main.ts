@@ -8,17 +8,31 @@ import "../database/checkConnection";
 
 // Import the Express application from ./app
 import app from "./app";
-app.get("/", async (req, res) => {
-  const data = require("../database/data/artist.json");
-  res.json(data);
+
+const dataArtist = require("../database/data/artist.json");
+
+app.get("/artist", async (req, res) => {
+  res.json(dataArtist);
 });
 app.get("/albums", async (req, res) => {
   const data = require("../database/data/album.json");
   res.json(data);
 });
+app.get("/artist/:id", async (req, res) => {
+  res.json(
+    dataArtist.filter((i: { id: number }) => i.id === Number(req.params.id)),
+  );
+});
 app.get("/albums/:id", async (req, res) => {
-  const data = require("../database/data/tracklist.json");
-  res.json(data.filter((i: { id: number }) => i.id === Number(req.params.id)));
+  const response = await fetch(
+    `https://api.deezer.com/album/${req.params.id}/tracks`,
+  );
+  const data = await response.json();
+  res.json(data);
+});
+app.get("/news", async (req, res) => {
+  const data = require("../database/data/news.json");
+  res.json(data);
 });
 
 // Get the port from the environment variables

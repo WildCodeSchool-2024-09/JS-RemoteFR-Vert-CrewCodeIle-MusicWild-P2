@@ -5,6 +5,14 @@ import type { SearchArtistTrackType } from "../types/SearchArtistTrackType";
 export default function SearchArtistTrack() {
   const [track, setTrack] = useState<SearchArtistTrackType[]>([]);
 
+  const handelClickAlbum = () => {
+    alert("Patience ! Option bientôt disponible");
+  };
+
+  const handeClickReturn = () => {
+    alert("Patience ! Option bientôt disponible");
+  };
+
   const { id } = useParams();
   const URL_API_SEARCH_ARTIST_TRACK = import.meta.env
     .VITE_API_SEARCH_ARTIST_TRACK;
@@ -26,11 +34,23 @@ export default function SearchArtistTrack() {
     <>
       <section className="trackList">
         <h1>Extraits musicaux</h1>
+        <button type="submit" className="returnList" onClick={handeClickReturn}>
+          {"< "}Retour
+        </button>
         <figure className="introduction">
           {track[0] != null && (
             <img src={track[0].album.cover_medium} alt={track[0].artist.name} />
           )}
-          <span>{track[0] != null && <h2>{track[0].artist.name}</h2>}</span>
+          <div className="detailsArtist">
+            <span>{track[0] != null && <h2>{track[0].artist.name}</h2>}</span>
+            <button
+              type="submit"
+              className="buttonAlbums"
+              onClick={handelClickAlbum}
+            >
+              Albums
+            </button>
+          </div>
         </figure>
         {track?.map((track: SearchArtistTrackType) => (
           <article key={track.id} className="track">

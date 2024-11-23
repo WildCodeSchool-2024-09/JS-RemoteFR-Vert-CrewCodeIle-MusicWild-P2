@@ -9,7 +9,7 @@ function ArtistsDetails() {
   const [artist, setArtist] = useState<artistType[]>([]);
   const { id } = useParams();
   useEffect(() => {
-    fetch(VITE_API_URL_ARTIST_DETAILS`${id}`)
+    fetch(`${VITE_API_URL_ARTIST_DETAILS}${id}`)
       .then((response) => response.json())
       .then((data) => setArtist(data))
       .catch((error) => console.error(error));

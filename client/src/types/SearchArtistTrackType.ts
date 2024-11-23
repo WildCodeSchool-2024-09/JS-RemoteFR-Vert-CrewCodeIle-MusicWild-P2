@@ -3,10 +3,23 @@ export type SearchArtistTrackType = {
   title: string;
   duration: number;
   preview: string;
-  constributors: {
+  album: {
+    cover: string;
+    cover_medium: string;
+    cover_small: string;
+    id: number;
+    title: string;
+  };
+  artist: {
     id: number;
     name: string;
-    picture: string;
-    picture_small: string;
   };
+  contributors: [
+    {
+      id: number;
+      name: string;
+      picture: string;
+      picture_small: string;
+    },
+  ];
 };

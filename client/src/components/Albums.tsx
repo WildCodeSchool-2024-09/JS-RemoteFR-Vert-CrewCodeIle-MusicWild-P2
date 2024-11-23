@@ -29,17 +29,18 @@ function Albums() {
   }, []);
 
   const handleClick = (id: string) => navigate(`/albums/${id}`);
+
   const [index, setIndex] = useState<number>(0);
 
   const handlePrec = () => {
-    if (index < 0) {
-      setIndex((p) => p - 1);
+    if (index > 0) {
+      setIndex(index - 1);
     }
   };
 
   const handleNext = () => {
-    if (index < albums.length) {
-      setIndex((n) => n + 1);
+    if (index < albums.length - 1) {
+      setIndex(index + 1);
     }
   };
 
@@ -55,7 +56,12 @@ function Albums() {
           &lt;
         </button>
         <div className="carousel-container">
-          <ul className="carousel-card">
+          <ul
+            className="carousel-card"
+            style={{
+              transform: `translateX(-${index * 80}%)`,
+            }}
+          >
             {albums.map((m) => (
               <li
                 className="carousel-slide"

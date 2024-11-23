@@ -206,7 +206,7 @@ a {
 .carousel-image {
   width: 100%;
   border-radius: 10%;
-  transition: transform 0.3s;
+  transition: transform 0.5s;
 }
 
 .carousel-image:hover {

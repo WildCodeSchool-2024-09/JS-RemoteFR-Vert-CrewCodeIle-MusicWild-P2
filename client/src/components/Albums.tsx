@@ -53,7 +53,7 @@ function Albums() {
           className="carousel-btn-prec"
           onClick={handlePrec}
         >
-          &lt;
+          &#10096;
         </button>
         <div className="carousel-container">
           <ul
@@ -74,7 +74,7 @@ function Albums() {
                   src={m.cover_medium}
                   alt={`Cover de l'album ${m.title}`}
                 />
-                <h3>{m.title}</h3>
+                <h3 className="albumName">{m.title}</h3>
               </li>
             ))}
           </ul>
@@ -84,7 +84,7 @@ function Albums() {
           className="carousel-btn-next"
           onClick={handleNext}
         >
-          &gt;
+          &#10097;
         </button>
       </div>
     </>

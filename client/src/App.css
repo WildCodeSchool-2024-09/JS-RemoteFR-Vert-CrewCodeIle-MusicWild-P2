@@ -165,8 +165,10 @@ a {
   text-align: center;
 }
 
+.albumTitle,
 .newsTitle {
   margin: 2em 2em;
+  text-align: center;
 }
 .newsList {
   display: flex;
@@ -180,7 +182,6 @@ a {
 /*Carousel creation*/
 .carousel {
   position: relative;
-  overflow: hidden;
   width: 90%;
   margin: 0 auto;
   padding: 1em 0;
@@ -224,7 +225,7 @@ a {
   width: 3em;
   height: 3em;
   transform: translateY(-130%);
-  z-index: 10;
+  z-index: 1;
 }
 
 .carousel-btn-next {
@@ -238,9 +239,14 @@ a {
   width: 3em;
   height: 3em;
   transform: translateY(-130%);
-  z-index: 10;
+  z-index: 1;
 }
 
+.carousel-btn-prec:hover,
+.carousel-btn-next:hover {
+  background-color: #551a8b;
+  color: #ffffff;
+}
 /*AlbumDetails*/
 /*Format mobile*/
 .albumDetails {

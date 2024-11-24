@@ -44,22 +44,17 @@ function Albums() {
     }
   };
 
+  const slideWidth = 200;
+
   return (
     <>
       <h2 className="albumTitle">Albums du moment</h2>
       <div className="carousel">
-        <button
-          type="button"
-          className="carousel-btn-prec"
-          onClick={handlePrec}
-        >
-          &#10096;
-        </button>
         <div className="carousel-container">
           <ul
             className="carousel-card"
             style={{
-              transform: `translateX(-${index * 80}%)`,
+              transform: `translateX(-${index * slideWidth}px)`,
             }}
           >
             {albums.map((m) => (
@@ -79,13 +74,27 @@ function Albums() {
             ))}
           </ul>
         </div>
-        <button
-          type="button"
-          className="carousel-btn-next"
-          onClick={handleNext}
-        >
-          &#10097;
-        </button>
+
+        {albums.length > 0 && (
+          <>
+            <button
+              type="button"
+              className="carousel-btn-prec"
+              onClick={handlePrec}
+              disabled={index === 0}
+            >
+              &#10096;
+            </button>
+            <button
+              type="button"
+              className="carousel-btn-next"
+              onClick={handleNext}
+              disabled={index >= albums.length - 1}
+            >
+              &#10097;
+            </button>
+          </>
+        )}
       </div>
     </>
   );

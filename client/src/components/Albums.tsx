@@ -32,19 +32,30 @@ function Albums() {
 
   const [index, setIndex] = useState<number>(0);
   const slideWidth = 200;
-  const slideToShow = 4;
+  const slideToShowDesktop = 6;
+  const slideToShowTablet = 4;
+  const slideToShowMobile = 2;
   const allSlides = albums.length;
-  const securityMargin = allSlides + slideToShow;
+  const securityMargin = allSlides + slideToShowMobile;
+  const screenWidth = window.innerWidth;
 
   const handlePrec = () => {
-    if (index > 0) {
-      setIndex(index - slideToShow);
+    if (index > 0 && screenWidth <= 768) {
+      setIndex(index - slideToShowMobile);
+    } else if (index > 0 && screenWidth <= 992) {
+      setIndex(index - slideToShowTablet);
+    } else {
+      setIndex(index - slideToShowDesktop);
     }
   };
 
   const handleNext = () => {
-    if (index + slideToShow < allSlides) {
-      setIndex(index + slideToShow);
+    if (screenWidth <= 768 && index + slideToShowMobile < allSlides) {
+      setIndex(index + slideToShowMobile);
+    } else if (screenWidth <= 992 && index + slideToShowTablet < allSlides) {
+      setIndex(index + slideToShowTablet);
+    } else {
+      setIndex(index + slideToShowDesktop);
     }
   };
 
@@ -91,7 +102,7 @@ function Albums() {
               type="button"
               className="carousel-btn-next"
               onClick={handleNext}
-              disabled={index >= allSlides + securityMargin}
+              disabled={index > securityMargin}
             >
               &#10097;
             </button>

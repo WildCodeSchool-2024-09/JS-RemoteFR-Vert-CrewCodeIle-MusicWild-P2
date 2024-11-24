@@ -31,20 +31,21 @@ function Albums() {
   const handleClick = (id: string) => navigate(`/albums/${id}`);
 
   const [index, setIndex] = useState<number>(0);
+  const slideWidth = 200;
+  const slideToShow = 10;
+  const allSlides = albums.length;
 
   const handlePrec = () => {
     if (index > 0) {
-      setIndex(index - 1);
+      setIndex(index - slideToShow);
     }
   };
 
   const handleNext = () => {
-    if (index < albums.length - 1) {
-      setIndex(index + 1);
+    if (index + slideToShow < allSlides + 10) {
+      setIndex(index + slideToShow);
     }
   };
-
-  const slideWidth = 200;
 
   return (
     <>
@@ -89,7 +90,7 @@ function Albums() {
               type="button"
               className="carousel-btn-next"
               onClick={handleNext}
-              disabled={index >= albums.length - 1}
+              disabled={index + slideToShow >= allSlides}
             >
               &#10097;
             </button>

@@ -32,8 +32,9 @@ function Albums() {
 
   const [index, setIndex] = useState<number>(0);
   const slideWidth = 200;
-  const slideToShow = 10;
+  const slideToShow = 4;
   const allSlides = albums.length;
+  const securityMargin = allSlides + slideToShow;
 
   const handlePrec = () => {
     if (index > 0) {
@@ -42,7 +43,7 @@ function Albums() {
   };
 
   const handleNext = () => {
-    if (index + slideToShow < allSlides + 10) {
+    if (index + slideToShow < allSlides) {
       setIndex(index + slideToShow);
     }
   };
@@ -90,7 +91,7 @@ function Albums() {
               type="button"
               className="carousel-btn-next"
               onClick={handleNext}
-              disabled={index + slideToShow >= allSlides}
+              disabled={index >= allSlides + securityMargin}
             >
               &#10097;
             </button>

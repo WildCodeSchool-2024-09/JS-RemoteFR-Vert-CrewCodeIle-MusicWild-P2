@@ -8,6 +8,9 @@ import "../database/checkConnection";
 
 // Import the Express application from ./app
 import app from "./app";
+
+const dataCatalog = require("../database/data/genre.json");
+
 app.get("/", async (req, res) => {
   const data = require("../database/data/artist.json");
   res.json(data);
@@ -21,8 +24,7 @@ app.get("/albums/:id", async (req, res) => {
   res.json(data.filter((i: { id: number }) => i.id === Number(req.params.id)));
 });
 app.get("/catalog", async (req, res) => {
-  const data = require("../database/data/genre.json");
-  res.json(data);
+  res.json(dataCatalog);
 });
 // Get the port from the environment variables
 const port = process.env.APP_PORT;

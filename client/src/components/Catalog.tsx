@@ -7,15 +7,13 @@ type catalogType = {
   picture: string;
 };
 
-const VITE_API_URL = import.meta.env.VITE_API_URL_CATALOG;
+const VITE_API_URL_CATALOG = import.meta.env.VITE_API_URL_CATALOG;
 
-export default function Catalog() {
+export default function Catalog1() {
   const [genre, setGenre] = useState<catalogType[]>([]);
 
-  const handleClick = (value: string) => console.log(value);
-
   useEffect(() => {
-    fetch(VITE_API_URL)
+    fetch(VITE_API_URL_CATALOG)
       .then((response) => response.json())
       .then((data) => setGenre(data))
       .catch((error) => console.error(error));
@@ -26,15 +24,11 @@ export default function Catalog() {
       <div className="container">
         <ul>
           <h1>CATALOGUE</h1>
+
           {genre.map((a) => (
-            <button
-              className="button"
-              type="button"
-              key={a.id}
-              onClick={() => handleClick(a.name)}
-            >
-              {a.name}
-            </button>
+            <div key={a.id}>
+              <img src={a.picture} alt={a.name} />
+            </div>
           ))}
         </ul>
       </div>

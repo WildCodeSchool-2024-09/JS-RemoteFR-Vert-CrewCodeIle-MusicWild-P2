@@ -40,22 +40,22 @@ function Albums() {
   const screenWidth = window.innerWidth;
 
   const handlePrec = () => {
-    if (index > 0 && screenWidth <= 768) {
-      setIndex(index - slideToShowMobile);
-    } else if (index > 0 && screenWidth <= 992) {
+    if (index > 0 && screenWidth >= 992) {
+      setIndex(index - slideToShowDesktop);
+    } else if (index > 0 && screenWidth >= 768) {
       setIndex(index - slideToShowTablet);
     } else {
-      setIndex(index - slideToShowDesktop);
+      setIndex(index - slideToShowMobile);
     }
   };
 
   const handleNext = () => {
-    if (screenWidth <= 768 && index + slideToShowMobile < allSlides) {
-      setIndex(index + slideToShowMobile);
-    } else if (screenWidth <= 992 && index + slideToShowTablet < allSlides) {
+    if (screenWidth >= 992 && index + slideToShowDesktop < allSlides) {
+      setIndex(index + slideToShowDesktop);
+    } else if (screenWidth >= 768 && index + slideToShowTablet < allSlides) {
       setIndex(index + slideToShowTablet);
     } else {
-      setIndex(index + slideToShowDesktop);
+      setIndex(index + slideToShowMobile);
     }
   };
 

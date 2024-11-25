@@ -214,13 +214,14 @@ a {
   position: absolute;
   top: 50%;
   cursor: pointer;
-  background: none;
-  border: none;
-  outline: none;
+  background: black;
+  height: 3.1em;
+  width: 4%;
   font-size: 4rem;
   left: 0;
-  color: #ffffff;
-  transform: translateY(-250%);
+  opacity: 50%;
+  color: #cfb3eb;
+  transform: translateY(-68%);
   z-index: 1;
 }
 
@@ -228,21 +229,28 @@ a {
   position: absolute;
   top: 50%;
   cursor: pointer;
-  background: none;
-  border: none;
-  outline: none;
+  background: black;
+  height: 3.1em;
+  width: 4%;
   font-size: 4rem;
   right: 0;
-  color: #ffffff;
-  transform: translateY(-250%);
+  opacity: 50%;
+  color: #cfb3eb;
+  transform: translateY(-68%);
   z-index: 1;
 }
 
 .carousel-btn-prec:hover,
 .carousel-btn-next:hover {
-  color: #551a8b;
+  color: #ffffff;
+  opacity: 70%;
 }
-
+@media screen and (max-width: 992px) {
+  .carousel-btn-next,
+  .carousel-btn-prec {
+    width: 10%;
+  }
+}
 .albumName {
   color: black;
 }

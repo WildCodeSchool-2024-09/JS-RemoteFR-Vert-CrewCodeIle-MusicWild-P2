@@ -18,10 +18,11 @@ type albumType = {
 function AlbumsDetails() {
   const [review, setPreview] = useState<albumType[]>([]);
   const { id } = useParams();
+  const VITE_API_ALBUMS_ID = import.meta.env.VITE_API_ALBUMS_ID;
   useEffect(() => {
-    fetch(`http://localhost:3310/albums/${id}`)
+    fetch(`${VITE_API_ALBUMS_ID}${id}`)
       .then((response) => response.json())
-      .then((data) => setPreview(data))
+      .then((data) => setPreview(data.data))
       .catch((error) => console.error(error));
   }, [id]);
 
@@ -39,7 +40,7 @@ function AlbumsDetails() {
         </thead>
         <tbody>
           {review.map((p) => (
-            <tr key={p.id}>
+            <tr key={p.title}>
               <td>{p.track_position}</td>
               <td>{p.title}</td>
               <td>{p.duration} sec</td>

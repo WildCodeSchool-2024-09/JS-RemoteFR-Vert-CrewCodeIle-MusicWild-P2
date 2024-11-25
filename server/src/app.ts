@@ -104,6 +104,7 @@ if (fs.existsSync(clientBuildPath)) {
 // Routes DEEZER
 
 router.use(cors({ origin: ["http://localhost:3000"] }));
+
 router.use(express.json());
 
 router.post("/search", async (req, res) => {
@@ -138,6 +139,15 @@ router.post("/search", async (req, res) => {
     const data = await response.json();
     res.json(data);
   }
+});
+
+router.post("/search/artist/track/", async (req, res) => {
+  const { id } = req.body;
+  const response = await fetch(
+    `https://api.deezer.com/artist/${id}/top?limit=10`,
+  );
+  const data = await response.json();
+  res.json(data);
 });
 
 /* ************************************************************************* */

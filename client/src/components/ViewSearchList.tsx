@@ -5,11 +5,12 @@ import SearchArtistCard from "./SearchArtistCard";
 
 export default function ViewSearchList() {
   const { categorySearch, textSearch } = useParams();
+  const URL_API_SEARCH = import.meta.env.VITE_API_SEARCH;
 
   const [artistList, setArtistList] = useState<SearchArtistType[] | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:3310/search", {
+    fetch(`${URL_API_SEARCH}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

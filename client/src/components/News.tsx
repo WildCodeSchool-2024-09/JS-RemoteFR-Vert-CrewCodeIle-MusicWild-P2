@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 type albumType = {
   id: string;
   name: string;
@@ -10,44 +9,41 @@ type albumType = {
   picture_medium: string;
   cover_medium: string;
   title: string;
+  cover: string;
 };
-
-function Albums() {
-  const [albums, setAlbums] = useState<albumType[]>([]);
+function News() {
+  const [news, setNews] = useState<albumType[]>([]);
   const navigate = useNavigate();
   const handleKeyUp = (event: { key: string }) => {
     if (event.key === "Enter") {
       alert("Touche Entrée pressée - Valider une action");
     }
   };
-  const VITE_API_ALBUMS = import.meta.env.VITE_API_ALBUMS;
+  const VITE_API_NEWS = import.meta.env.VITE_API_NEWS;
   useEffect(() => {
-    fetch(VITE_API_ALBUMS)
+    fetch(VITE_API_NEWS)
       .then((response) => response.json())
-      .then((data) => setAlbums(data))
+      .then((data) => setNews(data))
       .catch((error) => console.error(error));
   }, []);
-
   const handleClick = (id: string) => navigate(`/albums/${id}`);
 
   return (
-    <article className="albums">
-      <h2 className="albumTitle">Albums du moment</h2>
-      <div className="albumList">
-        {albums.map((m) => (
+    <article className="news">
+      <h2 className="newsTitle">Nouveautés</h2>
+      <div className="newsList">
+        {news.map((n) => (
           <div
-            className="cover"
-            key={m.id}
-            onClick={() => handleClick(m.id)}
+            key={n.id}
+            onClick={() => handleClick(n.id)}
             onKeyUp={handleKeyUp}
           >
-            <img src={m.cover_medium} alt={`Cover de l'album ${m.title}`} />
-            <h3>{m.title}</h3>
+            <img className="newsCover" src={n.cover_medium} alt={n.name} />
+            <h3>{n.title}</h3>
           </div>
         ))}
       </div>
     </article>
   );
 }
-
-export default Albums;
+export default News;

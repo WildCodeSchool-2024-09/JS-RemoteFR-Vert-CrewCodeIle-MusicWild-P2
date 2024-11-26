@@ -16,9 +16,7 @@ function Albums() {
   const [albums, setAlbums] = useState<albumType[]>([]);
   const navigate = useNavigate();
   const handleKeyUp = (event: { key: string }) => {
-    if (event.key === "Enter") {
-      alert("Touche Entrée pressée - Valider une action");
-    }
+    event.key === "Enter";
   };
   const VITE_API_ALBUMS = import.meta.env.VITE_API_ALBUMS;
   useEffect(() => {

@@ -172,33 +172,38 @@ a {
 }
 
 /*Carousel creation*/
-.carouselAlbum {
+.carouselAlbum,
+.carouselNews {
   position: relative;
   width: 100%;
   margin: 0 auto;
   padding: 1em 0;
 }
 
-.carousel-card-album {
+.carousel-card-album,
+.carousel-card-news {
   display: flex;
   gap: 1em;
   transition: transform 0.5s;
 }
 
-.carousel-slide-album {
+.carousel-slide-album,
+.carousel-slide-news {
   flex: 0 0 auto;
   width: 200px;
   text-align: center;
   cursor: pointer;
 }
 
-.carousel-image-album {
+.carousel-image-album,
+.carousel-image-news {
   width: 100%;
   border-radius: 10%;
   transition: transform 0.5s;
 }
 
-.carousel-image-album:hover {
+.carousel-image-album:hover,
+.carousel-image-news:hover {
   transform: scale(1.1);
 }
 
@@ -231,19 +236,52 @@ a {
   transform: translateY(-68%);
   z-index: 1;
 }
+.carousel-btn-prec-news {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  background: black;
+  height: 3.1em;
+  width: 4%;
+  font-size: 4rem;
+  left: 0;
+  opacity: 50%;
+  color: #cfb3eb;
+  transform: translateY(-204%);
+  z-index: 1;
+}
+.carousel-btn-next-news {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  background: black;
+  height: 3.1em;
+  width: 4%;
+  font-size: 4rem;
+  right: 0;
+  opacity: 50%;
+  color: #cfb3eb;
+  transform: translateY(-204%);
+  z-index: 1;
+}
 
 .carousel-btn-prec-album:hover,
-.carousel-btn-next-album:hover {
+.carousel-btn-next-album:hover,
+.carousel-btn-prec-news:hover,
+.carousel-btn-next-news:hover {
   color: #ffffff;
   opacity: 70%;
 }
 @media screen and (max-width: 992px) {
   .carousel-btn-next-album,
-  .carousel-btn-prec-album {
+  .carousel-btn-prec-album,
+  .carousel-btn-next-news,
+  .carousel-btn-prec-news {
     width: 10%;
   }
 }
-.albumName {
+.albumName,
+.newsName {
   color: black;
 }
 /*AlbumDetails*/

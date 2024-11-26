@@ -100,7 +100,7 @@ function Albums() {
               type="button"
               className="carousel-btn-next-album"
               onClick={handleNext}
-              disabled={index > securityMargin}
+              disabled={index >= securityMargin}
             >
               &#10097;
             </button>

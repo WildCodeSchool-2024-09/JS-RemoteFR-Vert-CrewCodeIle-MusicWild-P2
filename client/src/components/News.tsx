@@ -27,20 +27,34 @@ function News() {
   const handleClick = (id: string) => navigate(`/albums/${id}`);
   const [index, setIndex] = useState<number>(0);
   const slideWidth = 200;
+  const slideToShowDesktop = 4;
+  const slideToShowTablet = 3;
   const slideToShowMobile = 2;
   const allSlides = news.length;
-  const securityMargin = allSlides + slideToShowMobile;
+  const screenWidth = window.innerWidth;
 
   const handlePrec = () => {
-    setIndex(index - slideToShowMobile);
+    if (index > 0 && screenWidth >= 992) {
+      setIndex(index - slideToShowDesktop);
+    } else if (index > 0 && screenWidth >= 768) {
+      setIndex(index - slideToShowTablet);
+    } else {
+      setIndex(index - slideToShowMobile);
+    }
   };
 
   const handleNext = () => {
-    setIndex(index + slideToShowMobile);
+    if (screenWidth >= 992 && index + slideToShowDesktop < allSlides) {
+      setIndex(index + slideToShowDesktop);
+    } else if (screenWidth >= 768 && index + slideToShowTablet < allSlides) {
+      setIndex(index + slideToShowTablet);
+    } else {
+      setIndex(index + slideToShowMobile);
+    }
   };
 
   return (
-    <article className="news">
+    <>
       <h2 className="newsTitle">Nouveautés</h2>
       <div className="carouselNews">
         <div className="carousel-container-news">
@@ -67,28 +81,28 @@ function News() {
             ))}
           </ul>
         </div>
+        {news.length > 0 && (
+          <>
+            <button
+              type="button"
+              className="carousel-btn-prec-news"
+              onClick={handlePrec}
+              disabled={index === 0}
+            >
+              &#10096;
+            </button>
+            <button
+              type="button"
+              className="carousel-btn-next-news"
+              onClick={handleNext}
+              disabled={index > allSlides - 5}
+            >
+              &#10097;
+            </button>
+          </>
+        )}
       </div>
-      {news.length > 0 && (
-        <>
-          <button
-            type="button"
-            className="carousel-btn-prec-news"
-            onClick={handlePrec}
-            disabled={index === 0}
-          >
-            &#10096;
-          </button>
-          <button
-            type="button"
-            className="carousel-btn-next-news"
-            onClick={handleNext}
-            disabled={index > securityMargin}
-          >
-            &#10097;
-          </button>
-        </>
-      )}
-    </article>
+    </>
   );
 }
 export default News;

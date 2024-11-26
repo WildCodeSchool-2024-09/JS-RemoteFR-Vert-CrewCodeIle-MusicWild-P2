@@ -12,6 +12,8 @@ import app from "./app";
 const dataArtist = require("../database/data/artist.json");
 const data = require("../database/data/album.json");
 const dataNews = require("../database/data/news.json");
+const dataCatalog = require("../database/data/artist.json");
+const dataGenre = require("../database/data/genre.json");
 
 app.get("/artist", async (req, res) => {
   res.json(dataArtist);
@@ -41,7 +43,23 @@ app.get("/albums/:id", async (req, res) => {
 app.get("/news", async (req, res) => {
   res.json(dataNews);
 });
-
+app.get("/catalog", async (req, res) => {
+  res.json(dataGenre);
+});
+app.get("/catalog/artist/:id", async (req, res) => {
+  res.json(
+    dataCatalog.filter(
+      (i: { id_genre: number }) => i.id_genre === Number(req.params.id),
+    ),
+  );
+});
+app.get("/catalog/artist/albums/:id", async (req, res) => {
+  res.json(
+    data.filter(
+      (i: { id_artist: number }) => i.id_artist === Number(req.params.id),
+    ),
+  );
+});
 // Get the port from the environment variables
 const port = process.env.APP_PORT;
 

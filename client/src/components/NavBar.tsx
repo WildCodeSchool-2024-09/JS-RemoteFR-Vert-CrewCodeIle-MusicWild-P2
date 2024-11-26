@@ -32,6 +32,9 @@ function NavBar() {
             <li>
               <NavLink to={"/news"}>Nouveautés</NavLink>
             </li>
+            <li>
+              <NavLink to={"/catalog"}>Catalogue</NavLink>
+            </li>
           </ul>
           <div>
             <Search />

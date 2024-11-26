@@ -19,9 +19,7 @@ function CatalogDetailsAlbums() {
   const { id } = useParams();
   const navigate = useNavigate();
   const handleKeyUp = (event: { key: string }) => {
-    if (event.key === "Enter") {
-      alert("Touche Entrée pressée - Valider une action");
-    }
+    event.key === "Enter";
   };
   const VITE_API_CATALOG_ALBUMS_ID = import.meta.env.VITE_API_CATALOG_ALBUMS_ID;
 

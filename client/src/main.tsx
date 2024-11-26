@@ -8,7 +8,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 // Import the main app component
 import App from "./App";
 import AlbumsDetails from "./components/AlbumsDetails";
-import ArtistDetails from "./components/ArtistDetails";
+import ArtistDetails from "./components/ArtistDetails/ArtistDetails";
 import SearchArtistTrack from "./components/SearchArtistTrack";
 import AlbumsPage from "./pages/AlbumsPage";
 import ArtistPage from "./pages/ArtistPage";

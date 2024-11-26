@@ -18,6 +18,14 @@ app.get("/albums", async (req, res) => {
   const data = require("../database/data/album.json");
   res.json(data);
 });
+app.get("/artist/album/:id", async (req, res) => {
+  const data = require("../database/data/album.json");
+  res.json(
+    data.filter(
+      (j: { id_artist: number }) => j.id_artist === Number(req.params.id),
+    ),
+  );
+});
 app.get("/artist/:id", async (req, res) => {
   res.json(
     dataArtist.filter((i: { id: number }) => i.id === Number(req.params.id)),

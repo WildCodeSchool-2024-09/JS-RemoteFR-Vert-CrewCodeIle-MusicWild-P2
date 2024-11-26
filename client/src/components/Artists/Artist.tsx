@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import type { artistType } from "../types/artistType";
+import type { artistType } from "../../types/artistType";
 
 function Artist() {
   const VITE_API_URL_ARTIST = import.meta.env.VITE_API_URL_ARTIST;
@@ -23,7 +23,7 @@ function Artist() {
 
   return (
     <article className="artists">
-      <h2 className="artistTitle">Artiste du moment</h2>
+      <h2 className="artistTitle">Artistes</h2>
       <div className="artistList">
         {artist
           ? artist.map((a) => (

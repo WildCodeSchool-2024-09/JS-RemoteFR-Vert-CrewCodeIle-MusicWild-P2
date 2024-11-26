@@ -1,0 +1,19 @@
+.catalogSection,
+.catalogDetailsSection,
+.catalogDetailsAlbumsSection {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  cursor: pointer;
+}
+
+.catalogTitle,
+.catalogDetailsTitle,
+.catalogDetailsAlbumsTitle {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.catalogImage,
+.catalogDetailsImage {
+  border-radius: 10%;
+}

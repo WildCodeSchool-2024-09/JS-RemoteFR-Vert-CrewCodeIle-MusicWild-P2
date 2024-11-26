@@ -10,11 +10,6 @@
     "picture": "https://api.deezer.com/genre/116/image"
   },
   {
-    "id": 132,
-    "name": "Pop",
-    "picture": "https://api.deezer.com/genre/132/image"
-  },
-  {
     "id": 16,
     "name": "K-pop",
     "picture": "https://api.deezer.com/genre/16/image"

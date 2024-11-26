@@ -5,15 +5,18 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 /* ************************************************************************* */
 
-// Import the main app component
 import App from "./App";
+// Import the main app component
 import AlbumsDetails from "./components/AlbumsDetails";
-import SearchArtistTrack from "./components/SearchArtistTrack";
+import ArtistDetails from "./components/ArtistDetails/ArtistDetails";
+import CatalogDetails from "./components/CatalogDetails";
+import CatalogDetailsAlbums from "./components/CatalogDetailsAlbums";
 import AlbumsPage from "./pages/AlbumsPage";
 import ArtistPage from "./pages/ArtistPage";
+import CatalogPage from "./pages/GenrePage";
 import HomePage from "./pages/HomePage";
-import NewsPage from "./pages/NewsPage";
 import SearchPage from "./pages/SearchPage";
+
 // Try creating these components in the "pages" folder
 
 // import About from "./pages/About";
@@ -40,6 +43,23 @@ const router = createBrowserRouter([
         element: <AlbumsPage />,
       },
       {
+        path: "/catalog",
+        element: <CatalogPage />,
+      },
+      {
+        path: "/catalog/artist/:id",
+        element: <CatalogDetails />,
+      },
+      {
+        path: "/catalog/artist/albums/:id",
+        element: <CatalogDetailsAlbums />,
+      },
+
+      {
+        path: "/artist/:id",
+        element: <ArtistDetails />,
+      },
+      {
         path: "/albums/:id",
         element: <AlbumsDetails />,
       },
@@ -47,15 +67,6 @@ const router = createBrowserRouter([
         path: "/SearchPage/:categorySearch/:textSearch",
         element: <SearchPage />,
       },
-      {
-        path: "/news",
-        element: <NewsPage />,
-      },
-      {
-        path: "/search/artist/track/:id",
-        element: <SearchArtistTrack />,
-      },
-
       {
         path: "*",
         element: <h1>Error 404</h1>,

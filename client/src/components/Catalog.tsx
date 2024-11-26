@@ -13,9 +13,7 @@ export default function Catalog() {
   const VITE_API_URL_CATALOG = import.meta.env.VITE_API_URL_CATALOG;
   const navigate = useNavigate();
   const handleKeyUp = (event: { key: string }) => {
-    if (event.key === "Enter") {
-      alert("Touche Entrée pressée - Valider une action");
-    }
+    event.key === "Enter";
   };
 
   useEffect(() => {

@@ -10,9 +10,7 @@ function CatalogDetails() {
   const VITE_API_CATALOG_ID = import.meta.env.VITE_API_CATALOG_ID;
   const navigate = useNavigate();
   const handleKeyUp = (event: { key: string }) => {
-    if (event.key === "Enter") {
-      alert("Touche Entrée pressée - Valider une action");
-    }
+    event.key === "Enter";
   };
 
   useEffect(() => {

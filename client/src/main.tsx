@@ -10,6 +10,7 @@ import App from "./App";
 import AlbumsDetails from "./components/AlbumsDetails";
 import ArtistDetails from "./components/ArtistDetails";
 import CatalogDetails from "./components/CatalogDetails";
+import CatalogDetailsAlbums from "./components/CatalogDetailsAlbums";
 import AlbumsPage from "./pages/AlbumsPage";
 import ArtistPage from "./pages/ArtistPage";
 import CatalogPage from "./pages/GenrePage";
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/catalog/artist/:id",
         element: <CatalogDetails />,
+      },
+      {
+        path: "/catalog/artist/albums/:id",
+        element: <CatalogDetailsAlbums />,
       },
 
       {

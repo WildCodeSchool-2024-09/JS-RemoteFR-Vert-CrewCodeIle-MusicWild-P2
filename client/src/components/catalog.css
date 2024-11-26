@@ -1,5 +1,6 @@
 .catalogSection,
-.catalogDetailsSection {
+.catalogDetailsSection,
+.catalogDetailsAlbumsSection {
   display: flex;
   justify-content: center;
   gap: 1em;
@@ -7,7 +8,8 @@
 }
 
 .catalogTitle,
-.catalogDetailsTitle {
+.catalogDetailsTitle,
+.catalogDetailsAlbumsTitle {
   text-align: center;
   margin-bottom: 2em;
 }

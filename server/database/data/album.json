@@ -779,5 +779,38 @@
     "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/90f9b1386871a84976124f742c3cb14b/1000x1000-000000-80-0-0.jpg",
     "tracklist": "https://api.deezer.com/album/578353651/tracks",
     "id_artist": 6690
+  },
+  {
+    "id": "11038872",
+    "title": "Compton",
+    "cover": "https://api.deezer.com/album/11038872/image",
+    "cover_small": "https://cdn-images.dzcdn.net/images/cover/5a47ea3a310488ab5dbae15eb8371aba/56x56-000000-80-0-0.jpg",
+    "cover_medium": "https://cdn-images.dzcdn.net/images/cover/5a47ea3a310488ab5dbae15eb8371aba/250x250-000000-80-0-0.jpg",
+    "cover_big": "https://cdn-images.dzcdn.net/images/cover/5a47ea3a310488ab5dbae15eb8371aba/500x500-000000-80-0-0.jpg",
+    "cover_xl": "https://cdn-images.dzcdn.net/images/cover/5a47ea3a310488ab5dbae15eb8371aba/1000x1000-000000-80-0-0.jpg",
+    "tracklist": "https://api.deezer.com/album/11038872/tracks",
+    "id_artist": 763
+  },
+  {
+    "id": "13606387",
+    "title": "2001",
+    "cover": "https://api.deezer.com/album/13606387/image",
+    "cover_small": "https://cdn-images.dzcdn.net/images/cover/0d9a24d054cbc5ab11843beed9f1422b/56x56-000000-80-0-0.jpg",
+    "cover_medium": "https://cdn-images.dzcdn.net/images/cover/0d9a24d054cbc5ab11843beed9f1422b/250x250-000000-80-0-0.jpg",
+    "cover_big": "https://cdn-images.dzcdn.net/images/cover/0d9a24d054cbc5ab11843beed9f1422b/500x500-000000-80-0-0.jpg",
+    "cover_xl": "https://cdn-images.dzcdn.net/images/cover/0d9a24d054cbc5ab11843beed9f1422b/1000x1000-000000-80-0-0.jpg",
+    "tracklist": "https://api.deezer.com/album/13606387/tracks",
+    "id_artist": 763
+  },
+  {
+    "id": "162008",
+    "title": "2001 Instrumental",
+    "cover": "https://api.deezer.com/album/162008/image",
+    "cover_small": "https://cdn-images.dzcdn.net/images/cover/05666ba16b940ec860d4087886ab8522/56x56-000000-80-0-0.jpg",
+    "cover_medium": "https://cdn-images.dzcdn.net/images/cover/05666ba16b940ec860d4087886ab8522/250x250-000000-80-0-0.jpg",
+    "cover_big": "https://cdn-images.dzcdn.net/images/cover/05666ba16b940ec860d4087886ab8522/500x500-000000-80-0-0.jpg",
+    "cover_xl": "https://cdn-images.dzcdn.net/images/cover/05666ba16b940ec860d4087886ab8522/1000x1000-000000-80-0-0.jpg",
+    "tracklist": "https://api.deezer.com/album/162008/tracks",
+    "id_artist": 763
   }
 ]

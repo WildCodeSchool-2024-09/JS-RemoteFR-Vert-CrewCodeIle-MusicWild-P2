@@ -31,6 +31,7 @@ function News() {
   const slideToShowTablet = 3;
   const slideToShowMobile = 2;
   const allSlides = news.length;
+  const securityMargin = allSlides + 3;
   const screenWidth = window.innerWidth;
 
   const handlePrec = () => {
@@ -95,7 +96,7 @@ function News() {
               type="button"
               className="carousel-btn-next-news"
               onClick={handleNext}
-              disabled={index > allSlides - 5}
+              disabled={index >= securityMargin}
             >
               &#10097;
             </button>

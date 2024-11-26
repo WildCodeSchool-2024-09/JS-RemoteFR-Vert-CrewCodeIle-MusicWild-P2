@@ -5,4 +5,5 @@ export type artistType = {
   description: string;
   genre: string;
   preview: string;
+  picture_big: string;
 };

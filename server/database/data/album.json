@@ -261,39 +261,6 @@
     "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/553a13703dfda0b2cf25cacc4773f9f9/500x500-000000-80-0-0.jpg",
     "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/553a13703dfda0b2cf25cacc4773f9f9/1000x1000-000000-80-0-0.jpg",
     "tracklist": "https://api.deezer.com/album/65440222/tracks",
-    "id_artist": 776
-  },
-  {
-    "id": "493555081",
-    "title": "Trackhouse",
-    "cover": "https://api.deezer.com/album/493555081/image",
-    "cover_small": "https://e-cdns-images.dzcdn.net/images/cover/392692624f420b92f91b25004da67586/56x56-000000-80-0-0.jpg",
-    "cover_medium": "https://e-cdns-images.dzcdn.net/images/cover/392692624f420b92f91b25004da67586/250x250-000000-80-0-0.jpg",
-    "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/392692624f420b92f91b25004da67586/500x500-000000-80-0-0.jpg",
-    "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/392692624f420b92f91b25004da67586/1000x1000-000000-80-0-0.jpg",
-    "tracklist": "https://api.deezer.com/album/493555081/tracks",
-    "id_artist": 64333
-  },
-  {
-    "id": "121339922",
-    "title": "Libertad 548",
-    "cover": "https://api.deezer.com/album/121339922/image",
-    "cover_small": "https://e-cdns-images.dzcdn.net/images/cover/ea2d70bbc2c30c76b32394568aa9dbe4/56x56-000000-80-0-0.jpg",
-    "cover_medium": "https://e-cdns-images.dzcdn.net/images/cover/ea2d70bbc2c30c76b32394568aa9dbe4/250x250-000000-80-0-0.jpg",
-    "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/ea2d70bbc2c30c76b32394568aa9dbe4/500x500-000000-80-0-0.jpg",
-    "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/ea2d70bbc2c30c76b32394568aa9dbe4/1000x1000-000000-80-0-0.jpg",
-    "tracklist": "https://api.deezer.com/album/121339922/tracks",
-    "id_artist": 64333
-  },
-  {
-    "id": "65440222",
-    "title": "Gotti (Original Motion Picture Soundtrack)",
-    "cover": "https://api.deezer.com/album/65440222/image",
-    "cover_small": "https://e-cdns-images.dzcdn.net/images/cover/553a13703dfda0b2cf25cacc4773f9f9/56x56-000000-80-0-0.jpg",
-    "cover_medium": "https://e-cdns-images.dzcdn.net/images/cover/553a13703dfda0b2cf25cacc4773f9f9/250x250-000000-80-0-0.jpg",
-    "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/553a13703dfda0b2cf25cacc4773f9f9/500x500-000000-80-0-0.jpg",
-    "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/553a13703dfda0b2cf25cacc4773f9f9/1000x1000-000000-80-0-0.jpg",
-    "tracklist": "https://api.deezer.com/album/65440222/tracks",
     "id_artist": 64333
   },
   {
@@ -734,17 +701,6 @@
     "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/600b9666afe003a605a6aa14ee8d390a/500x500-000000-80-0-0.jpg",
     "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/600b9666afe003a605a6aa14ee8d390a/1000x1000-000000-80-0-0.jpg",
     "tracklist": "https://api.deezer.com/album/662975791/tracks",
-    "id_artist": 8473
-  },
-  {
-    "id": "664616541",
-    "title": "Chopin, Haydn, Mozart, Beethoven, Schubert, Brahms",
-    "cover": "https://api.deezer.com/album/664616541/image",
-    "cover_small": "https://e-cdns-images.dzcdn.net/images/cover/26284219ceb24acaea8646c45932426c/56x56-000000-80-0-0.jpg",
-    "cover_medium": "https://e-cdns-images.dzcdn.net/images/cover/26284219ceb24acaea8646c45932426c/250x250-000000-80-0-0.jpg",
-    "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/26284219ceb24acaea8646c45932426c/500x500-000000-80-0-0.jpg",
-    "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/26284219ceb24acaea8646c45932426c/1000x1000-000000-80-0-0.jpg",
-    "tracklist": "https://api.deezer.com/album/664616541/tracks",
     "id_artist": 8473
   },
   {

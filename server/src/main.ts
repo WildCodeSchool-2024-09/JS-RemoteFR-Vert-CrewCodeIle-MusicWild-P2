@@ -38,6 +38,15 @@ app.get("/catalog", async (req, res) => {
   const dataCatalog = require("../database/data/genre.json");
   res.json(dataCatalog);
 });
+app.get("/catalog/artist/:id", async (req, res) => {
+  const dataCatalog = require("../database/data/artist.json");
+  res.json(
+    dataCatalog.filter(
+      (i: { id_genre: number }) => i.id_genre === Number(req.params.id),
+    ),
+  );
+});
+
 // Get the port from the environment variables
 const port = process.env.APP_PORT;
 

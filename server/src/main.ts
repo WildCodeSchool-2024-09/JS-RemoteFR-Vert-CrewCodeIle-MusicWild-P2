@@ -10,16 +10,16 @@ import "../database/checkConnection";
 import app from "./app";
 
 const dataArtist = require("../database/data/artist.json");
+const data = require("../database/data/album.json");
+const dataNews = require("../database/data/news.json");
 
 app.get("/artist", async (req, res) => {
   res.json(dataArtist);
 });
 app.get("/albums", async (req, res) => {
-  const data = require("../database/data/album.json");
   res.json(data);
 });
 app.get("/artist/album/:id", async (req, res) => {
-  const data = require("../database/data/album.json");
   res.json(
     data.filter(
       (j: { id_artist: number }) => j.id_artist === Number(req.params.id),
@@ -39,8 +39,7 @@ app.get("/albums/:id", async (req, res) => {
   res.json(data);
 });
 app.get("/news", async (req, res) => {
-  const data = require("../database/data/news.json");
-  res.json(data);
+  res.json(dataNews);
 });
 
 // Get the port from the environment variables

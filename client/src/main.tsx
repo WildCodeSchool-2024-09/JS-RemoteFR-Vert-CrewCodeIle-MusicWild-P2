@@ -13,6 +13,7 @@ import CatalogDetails from "./components/CatalogDetails";
 import CatalogDetailsAlbums from "./components/CatalogDetailsAlbums";
 import AlbumsPage from "./pages/AlbumsPage";
 import ArtistPage from "./pages/ArtistPage";
+import ErrorPage from "./pages/ErrorPage";
 import CatalogPage from "./pages/GenrePage";
 import HomePage from "./pages/HomePage";
 import SearchPage from "./pages/SearchPage";
@@ -69,7 +70,7 @@ const router = createBrowserRouter([
       },
       {
         path: "*",
-        element: <h1>Error 404</h1>,
+        element: <ErrorPage />,
       },
     ],
   },

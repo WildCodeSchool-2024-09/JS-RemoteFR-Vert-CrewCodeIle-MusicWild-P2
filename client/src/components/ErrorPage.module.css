@@ -1,0 +1,27 @@
+.errorTitle {
+  text-align: center;
+  font-size: 5em;
+  margin: 1em 0 0.5em 0;
+}
+
+.gif {
+  display: flex;
+  justify-content: center;
+  height: 15em;
+  margin-bottom: 2em;
+}
+
+.textError {
+  font-size: 2em;
+  text-align: center;
+}
+
+.buttonError {
+  margin: 2em 0 2em 2em;
+  width: 12em;
+  height: 4em;
+  font-size: 1em;
+  border-radius: 1em;
+  background-color: #d0aad4;
+  text-decoration: none;
+}

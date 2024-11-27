@@ -9,7 +9,6 @@ export default function searchArtistCard({
     <>
       <figure className="card">
         <img src={artist.picture} alt={artist.name} />
-
         <p>
           <h1>{artist.name}</h1>
         </p>

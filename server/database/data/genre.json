@@ -5,18 +5,18 @@
     "picture": "https://api.deezer.com/genre/152/image"
   },
   {
-    "id": 200,
-    "name": "Pop",
-    "picture": "https://api.deezer.com/genre/152/image"
+    "id": 116,
+    "name": "Rap",
+    "picture": "https://api.deezer.com/genre/116/image"
   },
   {
-    "id": 241,
-    "name": "Soul",
-    "picture": "https://api.deezer.com/genre/152/image"
+    "id": 16,
+    "name": "K-pop",
+    "picture": "https://api.deezer.com/genre/16/image"
   },
   {
-    "id": 150,
-    "name": "Jazz",
-    "picture": "https://api.deezer.com/genre/152/image"
+    "id": 98,
+    "name": "Musique classique",
+    "picture": "https://api.deezer.com/genre/98/image"
   }
 ]

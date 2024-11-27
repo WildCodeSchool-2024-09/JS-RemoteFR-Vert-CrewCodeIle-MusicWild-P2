@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../components/catalog.css";
+import { useNavigate } from "react-router-dom";
 
 type catalogType = {
   id: string;
@@ -9,26 +10,37 @@ type catalogType = {
 
 export default function Catalog() {
   const [genre, setGenre] = useState<catalogType[]>([]);
+  const VITE_API_URL_CATALOG = import.meta.env.VITE_API_URL_CATALOG;
+  const navigate = useNavigate();
+  const handleKeyUp = (event: { key: string }) => {
+    event.key === "Enter";
+  };
 
   useEffect(() => {
-    fetch("http://localhost:3310/catalog")
+    fetch(VITE_API_URL_CATALOG)
       .then((response) => response.json())
       .then((data) => setGenre(data))
       .catch((error) => console.error(error));
   }, []);
 
+  const handleClick = (id: string) => navigate(`/catalog/artist/${id}`);
+
   return (
     <>
-      <div className="container">
-        <ul>
-          <h1>CATALOGUE</h1>
+      <div className="catalogContainer">
+        <h1 className="catalogTitle">CATALOGUE</h1>
+        <div className="catalogSection">
           {genre.map((a) => (
-            <button className="button" type="button" key={a.id}>
-              {" "}
-              {a.name}
-            </button>
+            <div
+              key={a.id}
+              onClick={() => handleClick(a.id)}
+              onKeyUp={handleKeyUp}
+            >
+              <img className="catalogImage" src={a.picture} alt={a.name} />
+              <p>{a.name}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </>
   );

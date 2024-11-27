@@ -8,9 +8,12 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 // Import the main app component
 import AlbumsDetails from "./components/AlbumsDetails";
-import Catalog from "./components/Catalog";
+import ArtistDetails from "./components/ArtistDetails/ArtistDetails";
+import CatalogDetails from "./components/CatalogDetails";
+import CatalogDetailsAlbums from "./components/CatalogDetailsAlbums";
 import AlbumsPage from "./pages/AlbumsPage";
 import ArtistPage from "./pages/ArtistPage";
+import CatalogPage from "./pages/GenrePage";
 import HomePage from "./pages/HomePage";
 import SearchPage from "./pages/SearchPage";
 
@@ -40,16 +43,29 @@ const router = createBrowserRouter([
         element: <AlbumsPage />,
       },
       {
+        path: "/catalog",
+        element: <CatalogPage />,
+      },
+      {
+        path: "/catalog/artist/:id",
+        element: <CatalogDetails />,
+      },
+      {
+        path: "/catalog/artist/albums/:id",
+        element: <CatalogDetailsAlbums />,
+      },
+
+      {
+        path: "/artist/:id",
+        element: <ArtistDetails />,
+      },
+      {
         path: "/albums/:id",
         element: <AlbumsDetails />,
       },
       {
         path: "/SearchPage/:categorySearch/:textSearch",
         element: <SearchPage />,
-      },
-      {
-        path: "/catalog",
-        element: <Catalog />,
       },
       {
         path: "*",

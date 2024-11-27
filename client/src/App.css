@@ -78,6 +78,7 @@ a {
   text-decoration: none;
   list-style: none;
   gap: 0.5em;
+  color: #551a8b;
 }
 .loupe {
   height: 25px;
@@ -128,36 +129,121 @@ a {
 }
 
 /*Main*/
-/*Artistes*/
-.artists {
+/*Album and News*/
+.albums,
+.news {
   text-align: center;
 }
+
+.albumTitle,
+.newsTitle,
 .artistTitle {
   margin: 2em 2em;
-}
-.artistList {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.artistPictures {
-  border-radius: 100%;
-}
-/*Album*/
-.albums {
   text-align: center;
 }
-.albumTitle {
-  margin: 2em 2em;
+
+/*Carousel creation*/
+.carouselAlbum,
+.carouselNews,
+.artistList {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em 0;
 }
-.albumList {
+
+.carousel-card-album,
+.carousel-card-news,
+.carousel-card-artist {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-bottom: 2em;
+  gap: 1em;
+  transition: transform 0.5s;
 }
-.cover {
+
+.carousel-slide-album,
+.carousel-slide-news,
+.carousel-slide-artist {
+  flex: 0 0 auto;
+  width: 200px;
+  text-align: center;
   cursor: pointer;
+}
+
+.carousel-image-album,
+.carousel-image-news {
+  width: 100%;
+  border-radius: 10%;
+  transition: transform 0.5s;
+}
+.artistPictures {
+  width: 100%;
+  border-radius: 100%;
+  transition: transform 0.5s;
+}
+
+.carousel-image-album:hover,
+.carousel-image-news:hover,
+.artistPictures:hover {
+  transform: scale(1.1);
+}
+
+.carousel-btn-prec-album,
+.carousel-btn-prec-news,
+.carousel-btn-prec-artist {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  background: black;
+  height: 3.1em;
+  width: 4%;
+  font-size: 4rem;
+  left: 0;
+  opacity: 50%;
+  color: #cfb3eb;
+  transform: translateY(-68%);
+  z-index: 1;
+}
+
+.carousel-btn-next-album,
+.carousel-btn-next-news,
+.carousel-btn-next-artist {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  background: black;
+  height: 3.1em;
+  width: 4%;
+  font-size: 4rem;
+  right: 0;
+  opacity: 50%;
+  color: #cfb3eb;
+  transform: translateY(-68%);
+  z-index: 1;
+}
+
+.carousel-btn-prec-album:hover,
+.carousel-btn-next-album:hover,
+.carousel-btn-prec-news:hover,
+.carousel-btn-next-news:hover,
+.carousel-btn-prec-artist:hover,
+.carousel-btn-next-artist:hover {
+  color: #ffffff;
+  opacity: 70%;
+}
+@media screen and (max-width: 992px) {
+  .carousel-btn-next-album,
+  .carousel-btn-prec-album,
+  .carousel-btn-next-news,
+  .carousel-btn-prec-news,
+  .carousel-btn-prec-artist,
+  .carousel-btn-next-artist {
+    width: 10%;
+  }
+}
+.albumName,
+.newsName,
+.artistName {
+  color: black;
 }
 /*AlbumDetails*/
 /*Format mobile*/

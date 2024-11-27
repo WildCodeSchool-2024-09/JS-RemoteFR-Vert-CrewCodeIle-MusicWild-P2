@@ -104,6 +104,7 @@ if (fs.existsSync(clientBuildPath)) {
 // Routes DEEZER
 
 router.use(cors({ origin: ["http://localhost:3000"] }));
+
 router.use(express.json());
 
 router.post("/search", async (req, res) => {

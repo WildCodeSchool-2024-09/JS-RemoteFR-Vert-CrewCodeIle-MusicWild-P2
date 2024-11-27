@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 type albumType = {
   id: string;
   name: string;
@@ -10,31 +9,29 @@ type albumType = {
   picture_medium: string;
   cover_medium: string;
   title: string;
+  cover: string;
 };
-
-function Albums() {
-  const [albums, setAlbums] = useState<albumType[]>([]);
+function News() {
+  const [news, setNews] = useState<albumType[]>([]);
   const navigate = useNavigate();
   const handleKeyUp = (event: { key: string }) => {
     event.key === "Enter";
   };
-  const VITE_API_ALBUMS = import.meta.env.VITE_API_ALBUMS;
+  const VITE_API_NEWS = import.meta.env.VITE_API_NEWS;
   useEffect(() => {
-    fetch(VITE_API_ALBUMS)
+    fetch(VITE_API_NEWS)
       .then((response) => response.json())
-      .then((data) => setAlbums(data))
+      .then((data) => setNews(data))
       .catch((error) => console.error(error));
   }, []);
-
   const handleClick = (id: string) => navigate(`/albums/${id}`);
-
   const [index, setIndex] = useState<number>(0);
   const slideWidth = 200;
-  const slideToShowDesktop = 6;
-  const slideToShowTablet = 4;
+  const slideToShowDesktop = 4;
+  const slideToShowTablet = 3;
   const slideToShowMobile = 2;
-  const allSlides = albums.length;
-  const securityMargin = allSlides + slideToShowMobile;
+  const allSlides = news.length;
+  const securityMargin = allSlides + 3;
   const screenWidth = window.innerWidth;
 
   const handlePrec = () => {
@@ -59,38 +56,37 @@ function Albums() {
 
   return (
     <>
-      <h2 className="albumTitle">Albums du moment</h2>
-      <div className="carouselAlbum">
-        <div className="carousel-container">
+      <h2 className="newsTitle">Nouveautés</h2>
+      <div className="carouselNews">
+        <div className="carousel-container-news">
           <ul
-            className="carousel-card-album"
+            className="carousel-card-news"
             style={{
               transform: `translateX(-${index * slideWidth}px)`,
             }}
           >
-            {albums.map((m) => (
+            {news.map((n) => (
               <li
-                className="carousel-slide-album"
-                key={m.id}
-                onClick={() => handleClick(m.id)}
+                className="carousel-slide-news"
+                key={n.id}
+                onClick={() => handleClick(n.id)}
                 onKeyUp={handleKeyUp}
               >
                 <img
-                  className="carousel-image-album"
-                  src={m.cover_medium}
-                  alt={`Cover de l'album ${m.title}`}
+                  className="carousel-image-news"
+                  src={n.cover_medium}
+                  alt={n.name}
                 />
-                <h3 className="albumName">{m.title}</h3>
+                <h3 className="newsName">{n.title}</h3>
               </li>
             ))}
           </ul>
         </div>
-
-        {albums.length > 0 && (
+        {news.length > 0 && (
           <>
             <button
               type="button"
-              className="carousel-btn-prec-album"
+              className="carousel-btn-prec-news"
               onClick={handlePrec}
               disabled={index === 0}
             >
@@ -98,7 +94,7 @@ function Albums() {
             </button>
             <button
               type="button"
-              className="carousel-btn-next-album"
+              className="carousel-btn-next-news"
               onClick={handleNext}
               disabled={index >= securityMargin}
             >
@@ -110,5 +106,4 @@ function Albums() {
     </>
   );
 }
-
-export default Albums;
+export default News;

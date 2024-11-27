@@ -38,6 +38,10 @@ nav {
   background-color: #551a8b;
 }
 
+h2 {
+  color: #33035f;
+}
+
 .hero {
   background-image: url(/public/Images/bacground-with-logo.jpg);
   background-size: contain;
@@ -86,6 +90,20 @@ a {
   color: #ffffff;
   font-size: 1.2em;
   height: 4em;
+}
+
+@media screen and (max-width: 992px) {
+  a {
+    font-size: 0.8em;
+  }
+  .navBarLink {
+    gap: 1em;
+  }
+}
+@media screen and (max-width: 650px) {
+  a {
+    font-size: 0.6em;
+  }
 }
 
 a:hover {

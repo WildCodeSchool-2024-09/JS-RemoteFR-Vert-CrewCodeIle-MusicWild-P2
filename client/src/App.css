@@ -27,7 +27,7 @@ body {
 .logoMW {
   width: 40%;
   margin-top: 1em;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 
 nav {
@@ -45,8 +45,11 @@ nav {
   background-position: center;
   height: 40em;
   width: 100%;
+  margin-bottom: 1em;
 }
+
 /*Responsiver version for picture*/
+
 @media screen and (max-width: 992px) {
   .hero {
     height: 30em;

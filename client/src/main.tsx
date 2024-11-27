@@ -16,6 +16,7 @@ import ArtistPage from "./pages/ArtistPage";
 import ErrorPage from "./pages/ErrorPage";
 import CatalogPage from "./pages/GenrePage";
 import HomePage from "./pages/HomePage";
+import NewsPage from "./pages/NewsPage";
 import SearchPage from "./pages/SearchPage";
 
 // Try creating these components in the "pages" folder
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "/catalog",
         element: <CatalogPage />,
+      },
+      {
+        path: "/news",
+        element: <NewsPage />,
       },
       {
         path: "/catalog/artist/:id",

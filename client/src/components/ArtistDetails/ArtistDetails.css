@@ -1,0 +1,155 @@
+h2 {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.artist-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.artist-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artist-name {
+  order: 1;
+  font-size: 2rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.artist-picture {
+  order: 2;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 10px 0;
+}
+
+.artist-description {
+  order: 3;
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 600px;
+}
+
+.artist-details {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.artist-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-name {
+  order: 1;
+  font-size: 2rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.artist-picture {
+  order: 2;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 10px 0;
+}
+
+.artist-description {
+  order: 3;
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 600px;
+}
+
+.albumList .cover img {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.albumList .cover:hover {
+  transform: scale(1.05);
+}
+
+.albumList h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.albums-playlist-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.albums-playlist-container.single {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.albums {
+  flex: 40%;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Tracklist {
+  flex: 80%;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.albumPlay {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.albumPlay td {
+  padding-bottom: 6px;
+}
+
+.albumPlay td :nth-child(2) {
+  text-align: center;
+}
+
+.albumPlay th:nth-child(3),
+.albumPlay td:nth-child(3) {
+  width: 100px;
+  text-align: center;
+}
+
+.albumPlay th {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.albumPlay td:nth-child(4) audio {
+  display: block;
+  margin: 0 auto;
+}

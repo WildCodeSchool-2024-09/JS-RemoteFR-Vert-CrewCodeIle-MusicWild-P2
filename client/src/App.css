@@ -32,10 +32,19 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   background-color: #551a8b;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+  }
 }
 
 h2 {
@@ -63,10 +72,12 @@ h2 {
 @media screen and (max-width: 575px) {
   .hero {
     height: 20em;
+    margin-top: 0;
   }
-}
-.titleMW {
-  visibility: hidden;
+  .titleMW {
+    visibility: hidden;
+    height: 0;
+  }
 }
 
 .listAndSearch {
@@ -137,7 +148,6 @@ a:hover {
 
   .titleMW {
     visibility: visible;
-    height: 20%;
     margin-top: 2em;
   }
 }
@@ -176,7 +186,43 @@ a:hover {
   text-align: center;
 }
 
+.albumName,
+.newsName,
+.artistName {
+  color: black;
+}
+/*AlbumDetails*/
+/*Format mobile*/
+.albumDetails {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.albumPlay {
+  width: 100%;
+  margin-top: 2em;
+}
+
+audio {
+  width: 200px;
+}
+
+/*Format Desktop*/
+@media screen and (min-width: 992px) {
+  .albumPlay {
+    margin-top: 5em;
+    text-align: left;
+  }
+
+  audio {
+    width: 300px;
+  }
+}
 /*Carousel creation*/
+
+article {
+  height: 20em;
+}
 .carouselAlbum,
 .carouselNews,
 .artistList {
@@ -184,6 +230,7 @@ a:hover {
   width: 100%;
   margin: 0 auto;
   padding: 1em 0;
+  height: 20em;
 }
 
 .carousel-card-album,
@@ -234,7 +281,7 @@ a:hover {
   left: 0;
   opacity: 50%;
   color: #cfb3eb;
-  transform: translateY(-68%);
+  transform: translateY(-72%);
   z-index: 1;
 }
 
@@ -251,7 +298,7 @@ a:hover {
   right: 0;
   opacity: 50%;
   color: #cfb3eb;
-  transform: translateY(-68%);
+  transform: translateY(-72%);
   z-index: 1;
 }
 
@@ -272,37 +319,5 @@ a:hover {
   .carousel-btn-prec-artist,
   .carousel-btn-next-artist {
     width: 10%;
-  }
-}
-.albumName,
-.newsName,
-.artistName {
-  color: black;
-}
-/*AlbumDetails*/
-/*Format mobile*/
-.albumDetails {
-  margin-top: 1em;
-  text-align: center;
-}
-
-.albumPlay {
-  width: 100%;
-  margin-top: 2em;
-}
-
-audio {
-  width: 200px;
-}
-
-/*Format Desktop*/
-@media screen and (min-width: 992px) {
-  .albumPlay {
-    margin-top: 5em;
-    text-align: left;
-  }
-
-  audio {
-    width: 300px;
   }
 }

@@ -8,8 +8,10 @@ export default function ViewSearchList() {
 
   const [artistList, setArtistList] = useState<SearchArtistType[] | null>(null);
 
+  const URL_API_SEARCH = import.meta.env.VITE_API_SEARCH;
+
   useEffect(() => {
-    fetch("http://localhost:3310/search", {
+    fetch(`${URL_API_SEARCH}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

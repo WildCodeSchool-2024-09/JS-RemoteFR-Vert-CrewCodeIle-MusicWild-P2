@@ -52,6 +52,7 @@ body {
 .logoMW {
   width: 40%;
   margin-top: 1em;
+  cursor: pointer;
 }
 nav {
   display: flex;

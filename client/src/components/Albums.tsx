@@ -16,9 +16,7 @@ function Albums() {
   const [albums, setAlbums] = useState<albumType[]>([]);
   const navigate = useNavigate();
   const handleKeyUp = (event: { key: string }) => {
-    if (event.key === "Enter") {
-      alert("Touche Entrée pressée - Valider une action");
-    }
+    event.key === "Enter";
   };
   const VITE_API_ALBUMS = import.meta.env.VITE_API_ALBUMS;
   useEffect(() => {
@@ -62,23 +60,23 @@ function Albums() {
   return (
     <>
       <h2 className="albumTitle">Albums du moment</h2>
-      <div className="carousel">
+      <div className="carouselAlbum">
         <div className="carousel-container">
           <ul
-            className="carousel-card"
+            className="carousel-card-album"
             style={{
               transform: `translateX(-${index * slideWidth}px)`,
             }}
           >
             {albums.map((m) => (
               <li
-                className="carousel-slide"
+                className="carousel-slide-album"
                 key={m.id}
                 onClick={() => handleClick(m.id)}
                 onKeyUp={handleKeyUp}
               >
                 <img
-                  className="carousel-image"
+                  className="carousel-image-album"
                   src={m.cover_medium}
                   alt={`Cover de l'album ${m.title}`}
                 />
@@ -92,7 +90,7 @@ function Albums() {
           <>
             <button
               type="button"
-              className="carousel-btn-prec"
+              className="carousel-btn-prec-album"
               onClick={handlePrec}
               disabled={index === 0}
             >
@@ -100,9 +98,9 @@ function Albums() {
             </button>
             <button
               type="button"
-              className="carousel-btn-next"
+              className="carousel-btn-next-album"
               onClick={handleNext}
-              disabled={index > securityMargin}
+              disabled={index >= securityMargin}
             >
               &#10097;
             </button>

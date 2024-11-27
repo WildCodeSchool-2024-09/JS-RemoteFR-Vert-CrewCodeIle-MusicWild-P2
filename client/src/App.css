@@ -40,13 +40,6 @@ nav {
   flex-wrap: wrap;
   flex-direction: column-reverse;
 }
-@media screen and (max-width: 768px) {
-  nav {
-    display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: nowrap;
-  }
-}
 
 h2 {
   color: #33035f;
@@ -61,26 +54,6 @@ h2 {
   width: 100%;
   margin-bottom: 1em;
 }
-
-/*Responsiver version for picture*/
-
-@media screen and (max-width: 992px) {
-  .hero {
-    height: 30em;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .hero {
-    height: 20em;
-    margin-top: 0;
-  }
-  .titleMW {
-    visibility: hidden;
-    height: 0;
-  }
-}
-
 .listAndSearch {
   display: flex;
   flex-direction: row;
@@ -92,7 +65,17 @@ h2 {
   margin-left: 0.5em;
   gap: 2em;
 }
+.loupe {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  transform: translateX(-120%) translateY(15%);
+}
 
+.searchBar {
+  padding: 0.7em 7em;
+  border: 0.5px solid black;
+}
 nav,
 li,
 a {
@@ -104,7 +87,15 @@ a {
   height: 4em;
 }
 
+a:hover {
+  color: #a306b6;
+}
+/*Responsive version*/
+
 @media screen and (max-width: 992px) {
+  .hero {
+    height: 30em;
+  }
   a {
     font-size: 0.8em;
   }
@@ -112,26 +103,69 @@ a {
     gap: 1em;
   }
 }
+/*Main*/
+/*Album and News*/
+
+article {
+  padding: 1em;
+  min-height: 15em;
+}
+.albums,
+.news {
+  text-align: center;
+}
+
+.albumTitle,
+.newsTitle,
+.artistTitle {
+  text-align: center;
+}
+
+.albumName,
+.newsName,
+.artistName {
+  color: black;
+}
+
+/*AlbumDetails*/
+/*Format mobile*/
+.albumDetails {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.albumPlay {
+  width: 100%;
+  margin-top: 2em;
+}
+
+audio {
+  width: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+  }
+  article {
+    min-height: 10em;
+  }
+}
+
 @media screen and (max-width: 650px) {
   a {
     font-size: 0.6em;
   }
-}
-
-a:hover {
-  color: #a306b6;
-}
-
-.loupe {
-  height: 25px;
-  width: 25px;
-  position: absolute;
-  transform: translateX(-120%) translateY(15%);
-}
-
-.searchBar {
-  padding: 0.7em 7em;
-  border: 0.5px solid black;
+  .hero {
+    height: 20em;
+    margin-top: 0;
+  }
+  .titleMW {
+    visibility: hidden;
+    height: 0;
+  }
 }
 
 /* Format Desktop */
@@ -151,10 +185,22 @@ a:hover {
     visibility: visible;
     margin-top: 2em;
   }
+  .footerClass {
+    height: 5em;
+    padding-top: 2em;
+  }
+  .albumPlay {
+    margin-top: 5em;
+    text-align: left;
+  }
+
+  audio {
+    width: 300px;
+  }
 }
 
 /*Footer component*/
-/*Format mobile*/
+
 .footerClass {
   background-color: black;
   color: var(--secondary-color);
@@ -166,70 +212,7 @@ a:hover {
 }
 
 /*Format Desktop*/
-@media screen and (min-width: 992px) {
-  .footerClass {
-    height: 5em;
-    padding-top: 2em;
-  }
-}
 
-/*Main*/
-/*Album and News*/
-.albums,
-.news {
-  text-align: center;
-}
-
-.albumTitle,
-.newsTitle,
-.artistTitle {
-  margin: 2em 2em;
-  text-align: center;
-}
-
-.albumName,
-.newsName,
-.artistName {
-  color: black;
-}
-/*AlbumDetails*/
-/*Format mobile*/
-.albumDetails {
-  margin-top: 1em;
-  text-align: center;
-}
-
-.albumPlay {
-  width: 100%;
-  margin-top: 2em;
-}
-
-audio {
-  width: 200px;
-}
-
-/*Format Desktop*/
-@media screen and (min-width: 992px) {
-  .albumPlay {
-    margin-top: 5em;
-    text-align: left;
-  }
-
-  audio {
-    width: 300px;
-  }
-}
-
-article {
-  padding: 1em;
-  min-height: 15em;
-}
-
-@media (max-width: 768px) {
-  article {
-    min-height: 10em;
-  }
-}
 /*Carousel creation*/
 
 .carouselAlbum,

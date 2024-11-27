@@ -25,7 +25,7 @@ function Artist() {
   const slideToShowTablet = 3;
   const slideToShowMobile = 2;
   const allSlides = artist.length;
-  const securityMargin = allSlides + 3;
+  const securityMargin = allSlides - slideToShowMobile;
   const screenWidth = window.innerWidth;
 
   const handlePrec = () => {

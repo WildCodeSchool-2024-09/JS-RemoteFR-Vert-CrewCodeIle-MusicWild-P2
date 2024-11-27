@@ -3,7 +3,7 @@ name: CD-traefik
 on:
   push:
     branches:
-      - main
+      - staging
 
 jobs:
   deploy:

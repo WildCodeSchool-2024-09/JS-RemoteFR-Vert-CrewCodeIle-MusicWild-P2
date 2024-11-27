@@ -28,7 +28,7 @@ export default function Catalog() {
   return (
     <>
       <div className="catalogContainer">
-        <h2 className="catalogTitle">CATALOGUE</h2>
+        <h2 className="catalogTitle">Catalogue</h2>
         <div className="catalogSection">
           {genre.map((a) => (
             <div

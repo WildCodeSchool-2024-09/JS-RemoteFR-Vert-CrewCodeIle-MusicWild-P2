@@ -100,7 +100,7 @@ a {
   list-style: none;
   gap: 0.5em;
   color: #ffffff;
-  font-size: 1.2em;
+  font-size: 1.1em;
   height: 4em;
 }
 
@@ -219,11 +219,19 @@ audio {
     width: 300px;
   }
 }
-/*Carousel creation*/
 
 article {
-  height: 20em;
+  padding: 1em;
+  min-height: 15em;
 }
+
+@media (max-width: 768px) {
+  article {
+    min-height: 10em;
+  }
+}
+/*Carousel creation*/
+
 .carouselAlbum,
 .carouselNews,
 .artistList {

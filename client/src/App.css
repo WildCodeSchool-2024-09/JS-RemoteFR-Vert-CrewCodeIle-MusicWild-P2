@@ -10,34 +10,6 @@
   box-sizing: border-box;
 }
 
-/* Section Hero en background */
-.hero {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), #d372de),
-    url("./Images/bacground-with-logo.jpg");
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
-}
-
-/* Section Hero en background */
-.hero {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), #d372de),
-    url("../public/Images/bacground-with-logo.jpg");
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
-}
-
 body {
   background: linear-gradient(var(--secondary-color), var(--main-color));
 }
@@ -49,6 +21,7 @@ body {
   display: grid;
   justify-items: center;
   align-items: center;
+  background-color: #551a8b;
 }
 
 .logoMW {
@@ -61,8 +34,29 @@ nav {
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  background-color: #551a8b;
 }
 
+.hero {
+  background-image: url(/public/Images/bacground-with-logo.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40em;
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .hero {
+    height: 30em;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .hero {
+    height: 20em;
+  }
+}
 .titleMW {
   visibility: hidden;
 }
@@ -85,7 +79,7 @@ a {
   text-decoration: none;
   list-style: none;
   gap: 0.5em;
-  color: #551a8b;
+  color: #ffffff;
 }
 
 .loupe {

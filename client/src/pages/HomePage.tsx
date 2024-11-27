@@ -6,6 +6,7 @@ import CatalogPage from "./GenrePage";
 function HomePage() {
   return (
     <>
+      <div className="hero" />
       <News />
       <Artist />
       <Albums />

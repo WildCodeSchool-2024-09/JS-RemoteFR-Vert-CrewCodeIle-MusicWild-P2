@@ -3,12 +3,13 @@ import { useNavigate } from "react-router-dom";
 import Search from "./Search";
 
 function NavBar() {
-
   const navigate = useNavigate();
-  const handleClick = () => {navigate("/");
+  const handleClick = () => {
+    navigate("/");
   };
   const handleKeyUp = (event: { key: string }) => {
-    event.key === "Enter";}
+    event.key === "Enter";
+  };
 
   return (
     <>
@@ -19,7 +20,6 @@ function NavBar() {
           alt="logo du site MusicWild"
           onClick={handleClick}
           onKeyUp={handleKeyUp}
-
         />
         <img
           className="titleMW"

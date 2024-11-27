@@ -1,7 +1,15 @@
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Search from "./Search";
 
 function NavBar() {
+
+  const navigate = useNavigate();
+  const handleClick = () => {navigate("/");
+  };
+  const handleKeyUp = (event: { key: string }) => {
+    event.key === "Enter";}
+
   return (
     <>
       <div className="navBarMW">
@@ -9,6 +17,9 @@ function NavBar() {
           className="logoMW"
           src="/Images/logo-musiwild-without-text.png"
           alt="logo du site MusicWild"
+          onClick={handleClick}
+          onKeyUp={handleKeyUp}
+
         />
         <img
           className="titleMW"

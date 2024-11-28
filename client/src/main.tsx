@@ -11,13 +11,13 @@ import AlbumsDetails from "./components/AlbumsDetails";
 import ArtistDetails from "./components/ArtistDetails/ArtistDetails";
 import CatalogDetails from "./components/CatalogDetails";
 import CatalogDetailsAlbums from "./components/CatalogDetailsAlbums";
+import News from "./components/News";
 import AlbumsPage from "./pages/AlbumsPage";
 import ArtistPage from "./pages/ArtistPage";
 import ErrorPage from "./pages/ErrorPage";
 import CatalogPage from "./pages/GenrePage";
 import HomePage from "./pages/HomePage";
 import SearchPage from "./pages/SearchPage";
-import News from "./components/News";
 
 // Try creating these components in the "pages" folder
 

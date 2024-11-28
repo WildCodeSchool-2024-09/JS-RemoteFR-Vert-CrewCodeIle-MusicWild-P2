@@ -43,10 +43,11 @@ button {
   border: none;
   border-radius: 1px;
   width: fit-content;
-  /* padding: 1px; */
+  height: fit-content;
+  padding: 1px;
   cursor: pointer;
   transform: translateX(-15px);
-  background-color: rgb(245, 234, 234);
+  background-color: white;
   color: black;
 }
 

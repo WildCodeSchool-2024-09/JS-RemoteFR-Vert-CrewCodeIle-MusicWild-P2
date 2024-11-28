@@ -11,11 +11,15 @@ import AlbumsDetails from "./components/AlbumsDetails";
 import ArtistDetails from "./components/ArtistDetails/ArtistDetails";
 import CatalogDetails from "./components/CatalogDetails";
 import CatalogDetailsAlbums from "./components/CatalogDetailsAlbums";
+import SearchAlbumArtistCard from "./components/searchBar/SearchAlbumArtistCard";
+import SearchAlbumTrack from "./components/searchBar/SearchAlbumTrack";
+import SearchArtistTrack from "./components/searchBar/SearchArtistTrack";
 import AlbumsPage from "./pages/AlbumsPage";
 import ArtistPage from "./pages/ArtistPage";
 import ErrorPage from "./pages/ErrorPage";
 import CatalogPage from "./pages/GenrePage";
 import HomePage from "./pages/HomePage";
+import NewsPage from "./pages/NewsPage";
 import SearchPage from "./pages/SearchPage";
 
 // Try creating these components in the "pages" folder
@@ -67,6 +71,22 @@ const router = createBrowserRouter([
       {
         path: "/SearchPage/:categorySearch/:textSearch",
         element: <SearchPage />,
+      },
+      {
+        path: "/news",
+        element: <NewsPage />,
+      },
+      {
+        path: "/search/artist/track/:id",
+        element: <SearchArtistTrack />,
+      },
+      {
+        path: "/search/album/tracks/:id",
+        element: <SearchAlbumTrack />,
+      },
+      {
+        path: "/search/album/artist/:id",
+        element: <SearchAlbumArtistCard />,
       },
       {
         path: "*",

@@ -50,6 +50,7 @@ nav {
   width: 100%;
   margin-bottom: 1em;
 }
+
 .listAndSearch {
   display: flex;
   flex-direction: row;
@@ -61,6 +62,7 @@ nav {
   margin-left: 0.5em;
   gap: 2em;
 }
+
 .loupe {
   height: 25px;
   width: 25px;
@@ -72,6 +74,7 @@ nav {
   padding: 0.7em 7em;
   border: 0.5px solid black;
 }
+
 nav,
 li,
 a {
@@ -86,26 +89,30 @@ a {
 a:hover {
   color: #a306b6;
 }
+
 /*Responsive version*/
 
 @media screen and (max-width: 992px) {
   .hero {
     height: 30em;
   }
+
   a {
     font-size: 0.8em;
   }
+
   .navBarLink {
     gap: 1em;
   }
 }
+
 /*Main*/
 /*Album and News*/
 
 article {
   padding: 1em;
-  min-height: 15em;
 }
+
 .albums,
 .news {
   text-align: center;
@@ -149,6 +156,7 @@ audio {
     flex-direction: column-reverse;
     flex-wrap: nowrap;
   }
+
   article {
     min-height: 10em;
   }
@@ -158,10 +166,12 @@ audio {
   a {
     font-size: 0.6em;
   }
+
   .hero {
     height: 20em;
     margin-top: 0;
   }
+
   .titleMW {
     visibility: hidden;
     height: 0;
@@ -185,10 +195,12 @@ audio {
     visibility: visible;
     margin-top: 2em;
   }
+
   .footerClass {
     height: 5em;
     padding-top: 2em;
   }
+
   .albumPlay {
     margin-top: 5em;
     text-align: left;
@@ -248,6 +260,7 @@ audio {
   border-radius: 10%;
   transition: transform 0.5s;
 }
+
 .artistPictures {
   width: 100%;
   border-radius: 100%;
@@ -303,6 +316,7 @@ audio {
   color: #ffffff;
   opacity: 70%;
 }
+
 @media screen and (max-width: 992px) {
   .carousel-btn-next-album,
   .carousel-btn-prec-album,

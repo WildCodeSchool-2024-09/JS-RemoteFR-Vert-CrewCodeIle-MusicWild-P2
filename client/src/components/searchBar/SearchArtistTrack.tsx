@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import type { SearchArtistTrackType } from "../types/SearchArtistTrackType";
+import { useNavigate } from "react-router-dom";
+import type { SearchArtistTrackType } from "../../types/SearchArtistTrackType";
 
 export default function SearchArtistTrack() {
   const [track, setTrack] = useState<SearchArtistTrackType[]>([]);
+  const navigate = useNavigate();
 
-  const handelClickAlbum = () => {
-    alert("Patience ! Option bientôt disponible");
-  };
-
+  //return to previous page
   const handeClickReturn = () => {
-    alert("Patience ! Option bientôt disponible");
+    window.history.go(-1);
   };
 
   const { id } = useParams();
@@ -42,11 +41,13 @@ export default function SearchArtistTrack() {
             <img src={track[0].album.cover_medium} alt={track[0].artist.name} />
           )}
           <div className="detailsArtist">
-            <span>{track[0] != null && <h2>{track[0].artist.name}</h2>}</span>
+            <span>{track[0] != null && <h3>{track[0].artist.name}</h3>}</span>
             <button
               type="submit"
               className="buttonAlbums"
-              onClick={handelClickAlbum}
+              onClick={() => {
+                navigate(`/search/album/artist/${track[0].artist.id}`);
+              }}
             >
               Albums
             </button>
@@ -55,7 +56,7 @@ export default function SearchArtistTrack() {
         {track?.map((track: SearchArtistTrackType) => (
           <article key={track.id} className="track">
             <img src={track.contributors[0].picture_small} alt="" />
-            <h2>{track.title}</h2>
+            <h3>{track.title}</h3>
             <span>
               <audio controls src={track.preview}>
                 <track kind="captions" />

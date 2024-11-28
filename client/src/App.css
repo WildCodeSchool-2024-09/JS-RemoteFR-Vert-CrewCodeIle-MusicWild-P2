@@ -212,7 +212,7 @@ audio {
 }
 
 /*Footer component*/
-
+/*Format mobile*/
 .footerClass {
   background-color: black;
   color: var(--secondary-color);
@@ -224,6 +224,26 @@ audio {
 }
 
 /*Format Desktop*/
+@media screen and (min-width: 992px) {
+  .footerClass {
+    height: 5em;
+    padding-top: 2em;
+  }
+}
+
+/*Main*/
+/*Album and News*/
+.albums,
+.news {
+  text-align: center;
+}
+
+.albumTitle,
+.newsTitle,
+.artistTitle {
+  margin: 2em 2em;
+  text-align: center;
+}
 
 /*Carousel creation*/
 

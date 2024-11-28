@@ -10,34 +10,6 @@
   box-sizing: border-box;
 }
 
-/* Section Hero en background */
-.hero {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), #d372de),
-    url("./Images/bacground-with-logo.jpg");
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
-}
-
-/* Section Hero en background */
-.hero {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), #d372de),
-    url("../public/Images/bacground-with-logo.jpg");
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
-}
-
 body {
   background: linear-gradient(var(--secondary-color), var(--main-color));
 }
@@ -49,25 +21,35 @@ body {
   display: grid;
   justify-items: center;
   align-items: center;
+  background-color: #551a8b;
 }
 
 .logoMW {
   width: 40%;
   margin-top: 1em;
   cursor: pointer;
+  margin-bottom: 1em;
 }
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
+  background-color: #551a8b;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
 }
 
-.titleMW {
-  visibility: hidden;
+.hero {
+  background-image: url(/public/Images/bacground-with-logo.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40em;
+  width: 100%;
+  margin-bottom: 1em;
 }
-
 .listAndSearch {
   display: flex;
   flex-direction: row;
@@ -79,16 +61,6 @@ nav {
   margin-left: 0.5em;
   gap: 2em;
 }
-
-nav,
-li,
-a {
-  text-decoration: none;
-  list-style: none;
-  gap: 0.5em;
-  color: #551a8b;
-}
-
 .loupe {
   height: 25px;
   width: 25px;
@@ -99,6 +71,101 @@ a {
 .searchBar {
   padding: 0.7em 7em;
   border: 0.5px solid black;
+}
+nav,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+  gap: 0.5em;
+  color: #ffffff;
+  font-size: 1.1em;
+  height: 4em;
+}
+
+a:hover {
+  color: #a306b6;
+}
+/*Responsive version*/
+
+@media screen and (max-width: 992px) {
+  .hero {
+    height: 30em;
+  }
+  a {
+    font-size: 0.8em;
+  }
+  .navBarLink {
+    gap: 1em;
+  }
+}
+/*Main*/
+/*Album and News*/
+
+article {
+  padding: 1em;
+  min-height: 15em;
+}
+.albums,
+.news {
+  text-align: center;
+}
+
+.albumTitle,
+.newsTitle,
+.artistTitle,
+.catalogTitle {
+  text-align: center;
+  color: #33035f;
+  font-size: 2em;
+  margin-bottom: 1.5em;
+}
+
+.albumName,
+.newsName,
+.artistName {
+  color: black;
+}
+
+/*AlbumDetails*/
+/*Format mobile*/
+.albumDetails {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.albumPlay {
+  width: 100%;
+  margin-top: 2em;
+}
+
+audio {
+  width: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+  }
+  article {
+    min-height: 10em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  a {
+    font-size: 0.6em;
+  }
+  .hero {
+    height: 20em;
+    margin-top: 0;
+  }
+  .titleMW {
+    visibility: hidden;
+    height: 0;
+  }
 }
 
 /* Format Desktop */
@@ -116,13 +183,24 @@ a {
 
   .titleMW {
     visibility: visible;
-    height: 20%;
     margin-top: 2em;
+  }
+  .footerClass {
+    height: 5em;
+    padding-top: 2em;
+  }
+  .albumPlay {
+    margin-top: 5em;
+    text-align: left;
+  }
+
+  audio {
+    width: 300px;
   }
 }
 
 /*Footer component*/
-/*Format mobile*/
+
 .footerClass {
   background-color: black;
   color: var(--secondary-color);
@@ -134,28 +212,9 @@ a {
 }
 
 /*Format Desktop*/
-@media screen and (min-width: 992px) {
-  .footerClass {
-    height: 5em;
-    padding-top: 2em;
-  }
-}
-
-/*Main*/
-/*Album and News*/
-.albums,
-.news {
-  text-align: center;
-}
-
-.albumTitle,
-.newsTitle,
-.artistTitle {
-  margin: 2em 2em;
-  text-align: center;
-}
 
 /*Carousel creation*/
+
 .carouselAlbum,
 .carouselNews,
 .artistList {
@@ -163,6 +222,7 @@ a {
   width: 100%;
   margin: 0 auto;
   padding: 1em 0;
+  height: 20em;
 }
 
 .carousel-card-album,
@@ -213,7 +273,7 @@ a {
   left: 0;
   opacity: 50%;
   color: #cfb3eb;
-  transform: translateY(-68%);
+  transform: translateY(-72%);
   z-index: 1;
 }
 
@@ -230,7 +290,7 @@ a {
   right: 0;
   opacity: 50%;
   color: #cfb3eb;
-  transform: translateY(-68%);
+  transform: translateY(-72%);
   z-index: 1;
 }
 
@@ -251,37 +311,5 @@ a {
   .carousel-btn-prec-artist,
   .carousel-btn-next-artist {
     width: 10%;
-  }
-}
-.albumName,
-.newsName,
-.artistName {
-  color: black;
-}
-/*AlbumDetails*/
-/*Format mobile*/
-.albumDetails {
-  margin-top: 1em;
-  text-align: center;
-}
-
-.albumPlay {
-  width: 100%;
-  margin-top: 2em;
-}
-
-audio {
-  width: 200px;
-}
-
-/*Format Desktop*/
-@media screen and (min-width: 992px) {
-  .albumPlay {
-    margin-top: 5em;
-    text-align: left;
-  }
-
-  audio {
-    width: 300px;
   }
 }

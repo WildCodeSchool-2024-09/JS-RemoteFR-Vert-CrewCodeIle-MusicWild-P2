@@ -35,16 +35,16 @@ function NavBar() {
               <NavLink to={"/"}>Accueil</NavLink>
             </li>
             <li>
-              <NavLink to={"/albums"}>Albums</NavLink>
-            </li>
-            <li>
-              <NavLink to={"/artist"}>Artistes</NavLink>
+              <NavLink to={"/catalog"}>Catalogue</NavLink>
             </li>
             <li>
               <NavLink to={"/news"}>Nouveautés</NavLink>
             </li>
             <li>
-              <NavLink to={"/catalog"}>Catalogue</NavLink>
+              <NavLink to={"/artist"}>Artistes</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/albums"}>Albums</NavLink>
             </li>
           </ul>
           <div>

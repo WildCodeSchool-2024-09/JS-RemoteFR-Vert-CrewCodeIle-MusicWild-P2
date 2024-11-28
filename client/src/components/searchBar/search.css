@@ -24,16 +24,13 @@ input {
   margin: auto;
   width: fit-content;
   background-color: var(--prymary-color-bg);
-  border-radius: 1.5rem;
-}
-
-.validate:hover {
-  border-color: white;
-}
-
-.validate {
-  border: 1px solid transparent;
   border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  border-radius: 0 10px 10px 0;
   height: 30px;
   background-color: var(--prymary-color-bg);
   width: 60px;
@@ -191,6 +188,25 @@ input {
   font-family: var(--font-default);
   font-size: 18px;
   font-weight: bold;
+}
+
+/* title search results */
+
+.titleSearchResults {
+  padding: 0.6rem;
+  text-align: center;
+  width: 100%;
+  margin-top: 2em;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgb(63, 23, 23);
+}
+
+.titleSearchResults h2 {
+  padding-left: 0.3rem;
+  padding-top: 0.3rem;
+  font-family: var(--font-default);
+  font-size: 24px;
+  font-weight: lighter;
 }
 
 /* title search results */

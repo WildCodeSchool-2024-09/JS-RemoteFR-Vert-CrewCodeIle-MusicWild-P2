@@ -1,8 +1,7 @@
 // Show card search artist
 
-import type { SearchArtistType } from "../types/SearchArtistType";
-
 import { useNavigate } from "react-router-dom";
+import type { SearchArtistType } from "../types/SearchArtistType";
 
 export default function searchArtistCard({
   artist,
@@ -11,9 +10,7 @@ export default function searchArtistCard({
 
   const handleOnClick = () => navigate(`/search/artist/track/${artist.id}`);
   const handleKeyUp = (event: { key: string }) => {
-    if (event.key === "Enter") {
-      alert("Touche Entrée pressée - Valider une action");
-    }
+    event.key === "Enter";
   };
 
   return (

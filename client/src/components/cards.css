@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --prymary-color-bg: #e955bd;
+  --2d-color-bg: white;
+  --font-default: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.cardTrack {
+  border: 1px solid transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 200px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--2d-color-bg);
+  cursor: pointer;
+}
+
+.cardTrack:hover {
+  border: 2px solid transparent;
+  box-shadow: 3px 3px 26px rgb(4, 20, 3);
+  border-color: #e955bd;
+}
+
+.cardTrack h1 {
+  padding-left: 0.3rem;
+  font-size: medium;
+}
+
+.cardTrack a {
+  text-decoration: none;
+  padding-left: 0.3rem;
+}
+
+/* SearchAlbumCard*/
+.cardAlbum {
+  border: 1px solid transparent;
+  width: 270px;
+  height: 350px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--2d-color-bg);
+  cursor: pointer;
+}
+
+.cardAlbum:hover {
+  border: 2px solid transparent;
+  box-shadow: 3px 3px 26px rgb(4, 20, 3);
+  border-color: #e955bd;
+}
+
+.cardAlbum h1 {
+  padding: 0.3rem;
+  font-size: medium;
+}
+
+.cardAlbum h2 {
+  padding-left: 0.3rem;
+  padding-top: 0.3rem;
+  font-family: var(--font-default);
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.cardAlbum h3 {
+  padding-left: 0.3rem;
+  font-family: var(--font-default);
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.cardAlbum a {
+  text-decoration: none;
+  padding-left: 0.3rem;
+}
+
+.cardAlbum span {
+  display: inline-block;
+}
+
+.track-card {
+  padding: 0.4rem;
+  border-radius: 10px 30px 30px 10px;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: var(--2d-color-bg);
+  gap: 0.3rem;
+}
+
+.track-card h2 {
+  padding-left: 0.3rem;
+  font-family: var(--font-default);
+  font-size: 16px;
+}
+
+/* cards for album artist */
+
+.cards-AlbumArtist {
+  border: 1px solid transparent;
+  width: 270px;
+  height: 350px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--2d-color-bg);
+  cursor: pointer;
+}
+
+.cards-AlbumArtist:hover {
+  border: 2px solid transparent;
+  box-shadow: 3px 3px 26px rgb(4, 20, 3);
+  border-color: #e955bd;
+}
+
+.cards-AlbumArtist h1 {
+  padding: 0.3rem;
+  font-size: medium;
+}
+
+.cards-AlbumArtist h2 {
+  padding-left: 0.3rem;
+  padding-top: 0.3rem;
+  font-family: var(--font-default);
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.cards-AlbumArtist h3 {
+  padding-left: 0.3rem;
+  font-family: var(--font-default);
+  font-size: 16px;
+  font-weight: lighter;
+}

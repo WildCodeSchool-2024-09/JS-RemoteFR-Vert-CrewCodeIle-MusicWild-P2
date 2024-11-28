@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import type { SearchArtistTrackType } from "../types/SearchArtistTrackType";
 
 export default function SearchArtistTrack() {
   const [track, setTrack] = useState<SearchArtistTrackType[]>([]);
+  const navigate = useNavigate();
 
-  const handelClickAlbum = () => {
-    alert("Patience ! Option bientôt disponible");
-  };
-
+  //return to previous page
   const handeClickReturn = () => {
-    alert("Patience ! Option bientôt disponible");
+    window.history.go(-1);
   };
 
   const { id } = useParams();
@@ -46,7 +45,9 @@ export default function SearchArtistTrack() {
             <button
               type="submit"
               className="buttonAlbums"
-              onClick={handelClickAlbum}
+              onClick={() => {
+                navigate(`/search/album/artist/${track[0].artist.id}`);
+              }}
             >
               Albums
             </button>

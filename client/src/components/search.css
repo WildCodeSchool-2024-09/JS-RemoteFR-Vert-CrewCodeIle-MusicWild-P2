@@ -24,18 +24,31 @@ input {
   margin: auto;
   width: fit-content;
   background-color: var(--prymary-color-bg);
-  border-radius: 10px;
+  border-radius: 1.5rem;
 }
 
-button {
-  border: none;
-  border-radius: 0 10px 10px 0;
+.validate:hover {
+  border-color: white;
+}
+
+.validate {
+  border: 1px solid transparent;
+  border-radius: 10px;
   height: 30px;
   background-color: var(--prymary-color-bg);
   width: 60px;
   padding: 1px;
   color: var(--2d-color-bg);
   cursor: pointer;
+}
+
+.delete {
+  border: none;
+  border-radius: 10px;
+  padding: 1px;
+
+  cursor: pointer;
+  transform: translateX(-15px);
 }
 
 #category {
@@ -55,14 +68,19 @@ button {
 }
 
 .card {
-  border-radius: 10px;
+  border: 1px solid transparent;
   width: 200px;
   margin: 20px;
   display: flex;
   flex-direction: column;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-color: var(--2d-color-bg);
   cursor: pointer;
+}
+
+.card:hover {
+  border: 2px solid transparent;
+  box-shadow: 3px 3px 26px rgb(4, 20, 3);
+  border-color: #e955bd;
 }
 
 .card h1 {
@@ -138,6 +156,11 @@ button {
   padding: 1px;
 }
 
+.detailsAlbum span h2 {
+  font-size: 30px;
+  font-family: var(--font-default);
+}
+
 .buttonAlbums {
   border: none;
   border-radius: 15px;
@@ -168,4 +191,23 @@ button {
   font-family: var(--font-default);
   font-size: 18px;
   font-weight: bold;
+}
+
+/* title search results */
+
+.titleSearchResults {
+  padding: 0.6rem;
+  text-align: center;
+  width: 100%;
+  margin-top: 2em;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgb(63, 23, 23);
+}
+
+.titleSearchResults h2 {
+  padding-left: 0.3rem;
+  padding-top: 0.3rem;
+  font-family: var(--font-default);
+  font-size: 24px;
+  font-weight: lighter;
 }

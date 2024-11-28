@@ -9,12 +9,15 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import AlbumsDetails from "./components/AlbumsDetails";
 import ArtistDetails from "./components/ArtistDetails";
+import SearchAlbumArtistCard from "./components/SearchAlbumArtistCard";
+import SearchAlbumTrack from "./components/SearchAlbumTrack";
 import SearchArtistTrack from "./components/SearchArtistTrack";
 import AlbumsPage from "./pages/AlbumsPage";
 import ArtistPage from "./pages/ArtistPage";
 import HomePage from "./pages/HomePage";
 import NewsPage from "./pages/NewsPage";
 import SearchPage from "./pages/SearchPage";
+
 // Try creating these components in the "pages" folder
 
 // import About from "./pages/About";
@@ -59,6 +62,14 @@ const router = createBrowserRouter([
       {
         path: "/search/artist/track/:id",
         element: <SearchArtistTrack />,
+      },
+      {
+        path: "/search/album/tracks/:id",
+        element: <SearchAlbumTrack />,
+      },
+      {
+        path: "/search/album/artist/:id",
+        element: <SearchAlbumArtistCard />,
       },
 
       {

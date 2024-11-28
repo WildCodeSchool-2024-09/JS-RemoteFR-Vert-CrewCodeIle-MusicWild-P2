@@ -41,10 +41,6 @@ nav {
   flex-direction: column-reverse;
 }
 
-h2 {
-  color: #33035f;
-}
-
 .hero {
   background-image: url(/public/Images/bacground-with-logo.jpg);
   background-size: contain;
@@ -117,8 +113,12 @@ article {
 
 .albumTitle,
 .newsTitle,
-.artistTitle {
+.artistTitle,
+.catalogTitle {
   text-align: center;
+  color: #33035f;
+  font-size: 2em;
+  margin-bottom: 1.5em;
 }
 
 .albumName,

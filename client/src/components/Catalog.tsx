@@ -37,7 +37,7 @@ export default function Catalog() {
               onKeyUp={handleKeyUp}
             >
               <img className="catalogImage" src={a.picture} alt={a.name} />
-              <p>{a.name}</p>
+              <h3>{a.name}</h3>
             </div>
           ))}
         </div>

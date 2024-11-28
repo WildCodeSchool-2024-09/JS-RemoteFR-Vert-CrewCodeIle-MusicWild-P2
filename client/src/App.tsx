@@ -9,7 +9,6 @@ function App() {
         <NavBar />
       </header>
       <main>
-        <div className="hero" />
         <Outlet />
       </main>
       <footer>

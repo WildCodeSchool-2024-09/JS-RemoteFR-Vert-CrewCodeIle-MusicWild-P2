@@ -42,6 +42,7 @@ function CatalogDetailsAlbums() {
             onKeyUp={handleKeyUp}
           >
             <img
+              className="catalogDetailsAlbumImage"
               src={a.cover_medium}
               alt={`Présentation de l'album ${a.title}`}
             />

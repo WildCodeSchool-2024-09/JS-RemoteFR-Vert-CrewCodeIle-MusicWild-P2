@@ -1,0 +1,134 @@
+/* Creation du style de la page */
+:root {
+  --main-color: #a306b6;
+  --secondary-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Footer global */
+.footerClass {
+  background-color: black;
+  color: var(--secondary-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Partie supérieure du footer */
+.footer-top {
+  display: flex;
+  width: 100%;
+}
+
+.contributors-columns {
+  justify-content: space-evenly;
+  display: flex;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.contributors-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.contributors-column p {
+  margin: 0.2em 0;
+}
+
+.footer-top .footer-column {
+  margin-bottom: 1em;
+}
+
+.footer-top h4 {
+  margin-bottom: 0.5em;
+  color: var(--main-color);
+}
+
+.footer-column {
+  text-align: center;
+}
+
+.footer-column h4 {
+  color: var(--main-color);
+  margin-top: 1em;
+}
+
+.footer-top .footer-column p,
+.footer-top .footer-column a {
+  margin-bottom: 0.3em;
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.footer-top .footer-column a:hover {
+  color: var(--main-color);
+}
+
+/* Partie inférieure du footer */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid var(--main-color);
+  padding: 1em;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 1em;
+}
+
+.social-links a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: var(--main-color);
+}
+
+/* Format Mobile */
+@media screen and (max-width: 991px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 1.5em;
+  }
+}
+
+/* Format Desktop */
+@media screen and (min-width: 992px) {
+  .footerClass {
+    flex-direction: column;
+  }
+
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .footer-column {
+    width: 30%;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    padding: 0.5em 1em;
+  }
+}

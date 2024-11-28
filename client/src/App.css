@@ -121,26 +121,6 @@ a {
   }
 }
 
-/*Footer component*/
-/*Format mobile*/
-.footerClass {
-  background-color: black;
-  color: var(--secondary-color);
-  padding-top: 1em;
-  display: flex;
-  justify-content: space-evenly;
-  bottom: 0;
-  width: 100%;
-}
-
-/*Format Desktop*/
-@media screen and (min-width: 992px) {
-  .footerClass {
-    height: 5em;
-    padding-top: 2em;
-  }
-}
-
 /*Main*/
 /*Album and News*/
 .albums,

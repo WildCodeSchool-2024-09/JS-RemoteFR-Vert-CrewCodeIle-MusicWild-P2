@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import type { artistType } from "../../types/artistType";
 
+import "./ArtistDetails.css";
+
 type albumType = {
   id: string;
   id_artist: string;
@@ -57,67 +59,73 @@ function ArtistsDetails() {
 
   return (
     <>
-      <article>
+      <article className="artist-details">
         {artist.map((a) => (
-          <div key={a.id}>
-            <img src={a.picture} alt={`Présentation de l'artiste ${a.name}`} />
-            <h2>{a.name}</h2>
-            <p>{a.description}</p>
+          <div key={a.id} className="artist-info">
+            <h2 className="artist-name">{a.name}</h2>
+            <img
+              className="artist-picture"
+              src={a.picture}
+              alt={`Présentation de l'artiste ${a.name}`}
+            />
+            <p className="artist-description">{a.description}</p>
           </div>
         ))}
       </article>
-      <article className="albums">
-        <h2 className="albumTitle">Principaux Albums</h2>
-        <div className="albumList">
-          {albums.map((m) => (
-            <div
-              className="cover"
-              key={m.id}
-              onClick={() => handleAlbumClick(m.id)}
-              onKeyUp={(event) => {
-                if (event.key === "Enter" || event.key === " ") {
-                  handleAlbumClick(m.id);
-                }
-              }}
-            >
-              <img src={m.cover_medium} alt={`Cover de l'album ${m.title}`} />
-              <h3>{m.title}</h3>
-            </div>
-          ))}
-        </div>
-      </article>
-      <article className="Tracklist">
-        {tracks && (
-          <article className="playlists">
-            <h2>Playlists de l'album</h2>
-            <table className="albumPlay">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Titre</th>
-                  <th>Durée</th>
-                  <th>Play</th>
-                </tr>
-              </thead>
-              <tbody>
-                {tracks.map((track) => (
-                  <tr key={track.title}>
-                    <td>{track.track_position}</td>
-                    <td>{track.title}</td>
-                    <td>{track.duration} sec</td>
-                    <td>
-                      <audio controls src={track.preview}>
-                        <track kind="captions" />
-                        Play
-                      </audio>
-                    </td>
+      <div className={`albums-playlist-container ${!tracks ? "single" : ""}`}>
+        <article className="albums">
+          <h2 className="albumTitle">Principaux Albums</h2>
+          <div className="albumList">
+            {albums.map((m) => (
+              <div
+                className="cover"
+                key={m.id}
+                onClick={() => handleAlbumClick(m.id)}
+                onKeyUp={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    handleAlbumClick(m.id);
+                  }
+                }}
+              >
+                <img src={m.cover_medium} alt={`Cover de l'album ${m.title}`} />
+                <h3>{m.title}</h3>
+              </div>
+            ))}
+          </div>
+        </article>
+        <article className="Tracklist">
+          {tracks && (
+            <article className="playlists">
+              <h2>Playlists de l'album</h2>
+              <table className="albumPlay">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Titre</th>
+                    <th>Durée</th>
+                    <th>Play</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </article>
-        )}
-      </article>
+                </thead>
+                <tbody>
+                  {tracks.map((track) => (
+                    <tr key={track.title}>
+                      <td>{track.track_position}</td>
+                      <td>{track.title}</td>
+                      <td>{track.duration} sec</td>
+                      <td>
+                        <audio controls src={track.preview}>
+                          <track kind="captions" />
+                          Play
+                        </audio>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </article>
+          )}
+        </article>
+      </div>
     </>
   );
 }

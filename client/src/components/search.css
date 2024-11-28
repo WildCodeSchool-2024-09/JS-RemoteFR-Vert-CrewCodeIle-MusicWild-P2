@@ -25,6 +25,7 @@ input {
   width: fit-content;
   background-color: var(--prymary-color-bg);
   border-radius: 10px;
+  flex-wrap: wrap;
 }
 
 button {

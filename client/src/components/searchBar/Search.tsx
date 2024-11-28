@@ -8,7 +8,6 @@ export default function Search() {
   const [textSearch, setTextSearch] = useState("");
   const [categorySearch, setCategorySearch] = useState("Artist");
   const options = ["Artist", "Album", "Titre"];
-  //const [deleteText, setDeleteText] = useState("");
 
   const navigate = useNavigate();
 

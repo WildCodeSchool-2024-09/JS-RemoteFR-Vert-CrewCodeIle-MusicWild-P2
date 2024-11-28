@@ -1,7 +1,7 @@
 // Show card search artist
 
 import { useNavigate } from "react-router-dom";
-import type { SearchArtistType } from "../types/SearchArtistType";
+import type { SearchArtistType } from "../../types/SearchArtistType";
 
 export default function searchArtistCard({
   artist,

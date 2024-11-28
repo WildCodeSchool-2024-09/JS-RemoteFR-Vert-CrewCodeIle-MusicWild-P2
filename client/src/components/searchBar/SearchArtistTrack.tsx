@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import type { SearchArtistTrackType } from "../types/SearchArtistTrackType";
+import type { SearchArtistTrackType } from "../../types/SearchArtistTrackType";
 
 export default function SearchArtistTrack() {
   const [track, setTrack] = useState<SearchArtistTrackType[]>([]);

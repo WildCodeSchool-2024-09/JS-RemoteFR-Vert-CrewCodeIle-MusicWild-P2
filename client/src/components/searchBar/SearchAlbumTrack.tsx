@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import type { SearchAlbumTrackType } from "../types/SearchAlbumTrackType";
+import type { SearchAlbumTrackType } from "../../types/SearchAlbumTrackType";
 
 export default function SearchArtistTrack() {
   const [trackList, setTrackList] = useState<SearchAlbumTrackType[]>([]);

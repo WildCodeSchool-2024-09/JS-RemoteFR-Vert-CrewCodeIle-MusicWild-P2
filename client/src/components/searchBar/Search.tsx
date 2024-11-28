@@ -2,7 +2,7 @@ import { type ChangeEvent, type FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./search.css";
-import "../pages/SearchPage";
+import "../../pages/SearchPage";
 
 export default function Search() {
   const [textSearch, setTextSearch] = useState("");

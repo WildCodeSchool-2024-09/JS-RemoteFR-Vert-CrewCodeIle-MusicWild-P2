@@ -1,7 +1,7 @@
 // Show card search track
 
 import "./cards.css";
-import type { SearchTrackType } from "../types/SearchTrackType";
+import type { SearchTrackType } from "../../types/SearchTrackType";
 
 export default function searchTrackCard({ track }: { track: SearchTrackType }) {
   return (

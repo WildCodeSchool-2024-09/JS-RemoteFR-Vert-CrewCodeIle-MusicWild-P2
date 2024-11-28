@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import type { SearchAlbumType } from "../types/SearchAlbumType";
-import type { SearchArtistType } from "../types/SearchArtistType";
-import type { SearchTrackType } from "../types/SearchTrackType";
+import type { SearchAlbumType } from "../../types/SearchAlbumType";
+import type { SearchArtistType } from "../../types/SearchArtistType";
+import type { SearchTrackType } from "../../types/SearchTrackType";
 import SearchAlbumCard from "./SearchAlbumCard";
 import SearchArtistCard from "./SearchArtistCard";
 import SearchTrackCard from "./SearchTrackCard";

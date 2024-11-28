@@ -2,7 +2,7 @@
 
 import "./cards.css";
 import { useNavigate } from "react-router-dom";
-import type { SearchAlbumType } from "../types/SearchAlbumType";
+import type { SearchAlbumType } from "../../types/SearchAlbumType";
 export default function searchAbumCard({ album }: { album: SearchAlbumType }) {
   const navigate = useNavigate();
 

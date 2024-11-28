@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Search from "./Search";
+import Search from "./searchBar/Search";
 
 function NavBar() {
   const navigate = useNavigate();

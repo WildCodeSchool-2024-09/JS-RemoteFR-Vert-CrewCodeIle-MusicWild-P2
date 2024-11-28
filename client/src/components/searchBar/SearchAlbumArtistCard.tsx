@@ -5,7 +5,7 @@ import "./search.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import type { SearchAlbumArtistType } from "../types/SearchAlbumArtistType";
+import type { SearchAlbumArtistType } from "../../types/SearchAlbumArtistType";
 
 export default function searchAbumArtistCard() {
   const [albumArtist, setAlbumArtist] = useState<SearchAlbumArtistType[]>([]);

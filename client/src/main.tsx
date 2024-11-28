@@ -11,6 +11,7 @@ import AlbumsDetails from "./components/AlbumsDetails";
 import ArtistDetails from "./components/ArtistDetails/ArtistDetails";
 import CatalogDetails from "./components/CatalogDetails";
 import CatalogDetailsAlbums from "./components/CatalogDetailsAlbums";
+import News from "./components/News";
 import AlbumsPage from "./pages/AlbumsPage";
 import ArtistPage from "./pages/ArtistPage";
 import ErrorPage from "./pages/ErrorPage";
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
       {
         path: "/SearchPage/:categorySearch/:textSearch",
         element: <SearchPage />,
+      },
+      {
+        path: "/news",
+        element: <News />,
       },
       {
         path: "*",

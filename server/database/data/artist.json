@@ -33,7 +33,7 @@
     "tracklist": "https://api.deezer.com/artist/705/top?limit=50"
   },
   {
-    "id": "415",
+    "id": 415,
     "id_genre": 152,
     "name": "Nirvana",
     "description": "Nirvana, groupe emblématique de grunge fondé en 1987 à Aberdeen (États-Unis), est composé de Kurt Cobain, Krist Novoselic et Dave Grohl. Leur album Nevermind (1991) et le tube Smells Like Teen Spirit ont marqué l'histoire du rock. Le suicide de Cobain en 1994 a scellé leur légende.",
@@ -44,7 +44,7 @@
     "tracklist": "https://api.deezer.com/artist/415/top?limit=50"
   },
   {
-    "id": "2",
+    "id": 2,
     "id_genre": 152,
     "name": "The Clash",
     "description": "The Clash, groupe britannique formé en 1976 à Londres, incarne l'esprit du punk rock. Mené par Joe Strummer et Mick Jones, il mélange rock, reggae et politique engagée. Albums cultes comme London Calling (1979) marquent l'histoire musicale. Séparé en 1986, leur influence reste majeure dans la musique contemporaine.",

@@ -8,8 +8,8 @@ export default function searchTrackCard({ track }: { track: SearchTrackType }) {
     <>
       <article className="track-card">
         <img src={track.artist.picture_small} alt={track.artist.name} />
-        <h2>{track.artist.name}</h2>
-        <h2>{track.title}</h2>
+        <h3>{track.artist.name}</h3>
+        <h3>{track.title}</h3>
         <span>
           <audio controls src={track.preview}>
             <track kind="captions" />

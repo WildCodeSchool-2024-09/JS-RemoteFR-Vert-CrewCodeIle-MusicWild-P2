@@ -41,7 +41,7 @@ export default function SearchArtistTrack() {
             <img src={track[0].album.cover_medium} alt={track[0].artist.name} />
           )}
           <div className="detailsArtist">
-            <span>{track[0] != null && <h2>{track[0].artist.name}</h2>}</span>
+            <span>{track[0] != null && <h3>{track[0].artist.name}</h3>}</span>
             <button
               type="submit"
               className="buttonAlbums"
@@ -56,7 +56,7 @@ export default function SearchArtistTrack() {
         {track?.map((track: SearchArtistTrackType) => (
           <article key={track.id} className="track">
             <img src={track.contributors[0].picture_small} alt="" />
-            <h2>{track.title}</h2>
+            <h3>{track.title}</h3>
             <span>
               <audio controls src={track.preview}>
                 <track kind="captions" />

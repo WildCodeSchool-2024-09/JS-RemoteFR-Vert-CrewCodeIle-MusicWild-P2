@@ -44,9 +44,9 @@ export default function searchAbumArtistCard() {
               }}
               onKeyUp={handleKeyUp}
             />
-            <h2>
+            <h3>
               <b>Artiste</b> : {a.artist.name}
-            </h2>
+            </h3>
             <h3>
               <b>Album</b> : {a.album.title}
             </h3>

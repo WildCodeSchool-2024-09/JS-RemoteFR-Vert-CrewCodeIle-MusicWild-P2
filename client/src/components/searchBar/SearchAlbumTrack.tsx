@@ -42,15 +42,15 @@ export default function SearchArtistTrack() {
               {"< "}Retour
             </button>
 
-            <span>{trackList[0] && <h2>Album : {trackList[0].title}</h2>}</span>
+            <span>{trackList[0] && <h3>Album : {trackList[0].title}</h3>}</span>
             <span>
-              {trackList[0] && <h2>Artist : {trackList[0].artist.name}</h2>}
+              {trackList[0] && <h3>Artist : {trackList[0].artist.name}</h3>}
             </span>
           </div>
         </figure>
         {trackList?.map((track: SearchAlbumTrackType) => (
           <article key={track.id} className="track">
-            <h2>{track.title}</h2>
+            <h3>{track.title}</h3>
             <span>
               <audio controls src={track.preview}>
                 <track kind="captions" />

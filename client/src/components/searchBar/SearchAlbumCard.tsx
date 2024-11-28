@@ -21,9 +21,9 @@ export default function searchAbumCard({ album }: { album: SearchAlbumType }) {
           onClick={handleOnClick}
           onKeyUp={handleKeyUp}
         />
-        <h2>
+        <h3>
           <b>Artiste</b> : {album.artist.name}
-        </h2>
+        </h3>
         <h3>
           <b>Album</b> : {album.album.title}
         </h3>

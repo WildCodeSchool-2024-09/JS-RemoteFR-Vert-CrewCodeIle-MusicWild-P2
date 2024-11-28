@@ -27,7 +27,6 @@ export default function SearchArtistTrack() {
       .then((data) => setTrackList(data.data))
       .catch((error) => console.error(error));
   }, [id]);
-
   return (
     <>
       <section className="trackList">

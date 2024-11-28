@@ -1,36 +1,30 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-type albumType = {
-  id: string;
-  name: string;
-  picture: string;
-  genre: string;
-  preview: string;
-  picture_medium: string;
-  cover_medium: string;
-  title: string;
-  cover: string;
-};
-function News() {
-  const [news, setNews] = useState<albumType[]>([]);
+import type { artistType } from "../../types/artistType";
+
+function Artist() {
+  const VITE_API_URL_ARTIST = import.meta.env.VITE_API_URL_ARTIST;
+  const [artist, setArtist] = useState<artistType[]>([]);
   const navigate = useNavigate();
   const handleKeyUp = (event: { key: string }) => {
     event.key === "Enter";
   };
-  const VITE_API_NEWS = import.meta.env.VITE_API_NEWS;
+
   useEffect(() => {
-    fetch(VITE_API_NEWS)
+    fetch(VITE_API_URL_ARTIST)
       .then((response) => response.json())
-      .then((data) => setNews(data))
+      .then((data) => setArtist(data))
       .catch((error) => console.error(error));
   }, []);
-  const handleClick = (id: string) => navigate(`/albums/${id}`);
+
+  const handleClick = (id: number) => navigate(`/artist/${id}`);
+
   const [index, setIndex] = useState<number>(0);
   const slideWidth = 200;
   const slideToShowDesktop = 4;
   const slideToShowTablet = 3;
   const slideToShowMobile = 2;
-  const allSlides = news.length;
+  const allSlides = artist.length;
   const securityMargin = allSlides - slideToShowMobile;
   const screenWidth = window.innerWidth;
 
@@ -43,7 +37,6 @@ function News() {
       setIndex(index - slideToShowMobile);
     }
   };
-
   const handleNext = () => {
     if (screenWidth >= 992 && index + slideToShowDesktop < allSlides) {
       setIndex(index + slideToShowDesktop);
@@ -55,38 +48,40 @@ function News() {
   };
 
   return (
-    <>
-      <h2 className="newsTitle">Nouveautés</h2>
-      <div className="carouselNews">
-        <div className="carousel-container-news">
+    <article className="artists">
+      <h2 className="artistTitle">Artistes</h2>
+      <div className="artistList">
+        <div className="carousel-container">
           <ul
-            className="carousel-card-news"
+            className="carousel-card-artist"
             style={{
               transform: `translateX(-${index * slideWidth}px)`,
             }}
           >
-            {news.map((n) => (
-              <li
-                className="carousel-slide-news"
-                key={n.id}
-                onClick={() => handleClick(n.id)}
-                onKeyUp={handleKeyUp}
-              >
-                <img
-                  className="carousel-image-news"
-                  src={n.cover_medium}
-                  alt={n.name}
-                />
-                <h3 className="newsName">{n.title}</h3>
-              </li>
-            ))}
+            {artist
+              ? artist.map((a) => (
+                  <li
+                    className="carousel-slide-artist"
+                    key={a.id}
+                    onClick={() => handleClick(a.id)}
+                    onKeyUp={handleKeyUp}
+                  >
+                    <img
+                      className="artistPictures"
+                      src={a.picture_big}
+                      alt={`Nom de l'artiste : ${a.name}`}
+                    />
+                    <h3 className="artistName">{a.name}</h3>
+                  </li>
+                ))
+              : ""}
           </ul>
         </div>
-        {news.length > 0 && (
+        {artist.length > 0 && (
           <>
             <button
               type="button"
-              className="carousel-btn-prec-news"
+              className="carousel-btn-prec-artist"
               onClick={handlePrec}
               disabled={index === 0}
             >
@@ -94,7 +89,7 @@ function News() {
             </button>
             <button
               type="button"
-              className="carousel-btn-next-news"
+              className="carousel-btn-next-artist"
               onClick={handleNext}
               disabled={index >= securityMargin}
             >
@@ -103,7 +98,7 @@ function News() {
           </>
         )}
       </div>
-    </>
+    </article>
   );
 }
-export default News;
+export default Artist;

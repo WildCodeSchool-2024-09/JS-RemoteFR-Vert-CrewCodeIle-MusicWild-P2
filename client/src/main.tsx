@@ -5,15 +5,19 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 /* ************************************************************************* */
 
-// Import the main app component
 import App from "./App";
+// Import the main app component
 import AlbumsDetails from "./components/AlbumsDetails";
-import ArtistDetails from "./components/ArtistDetails";
+import ArtistDetails from "./components/ArtistDetails/ArtistDetails";
+import CatalogDetails from "./components/CatalogDetails";
+import CatalogDetailsAlbums from "./components/CatalogDetailsAlbums";
 import SearchAlbumArtistCard from "./components/SearchAlbumArtistCard";
 import SearchAlbumTrack from "./components/SearchAlbumTrack";
 import SearchArtistTrack from "./components/SearchArtistTrack";
 import AlbumsPage from "./pages/AlbumsPage";
 import ArtistPage from "./pages/ArtistPage";
+import ErrorPage from "./pages/ErrorPage";
+import CatalogPage from "./pages/GenrePage";
 import HomePage from "./pages/HomePage";
 import NewsPage from "./pages/NewsPage";
 import SearchPage from "./pages/SearchPage";
@@ -44,6 +48,19 @@ const router = createBrowserRouter([
         element: <AlbumsPage />,
       },
       {
+        path: "/catalog",
+        element: <CatalogPage />,
+      },
+      {
+        path: "/catalog/artist/:id",
+        element: <CatalogDetails />,
+      },
+      {
+        path: "/catalog/artist/albums/:id",
+        element: <CatalogDetailsAlbums />,
+      },
+
+      {
         path: "/artist/:id",
         element: <ArtistDetails />,
       },
@@ -71,10 +88,9 @@ const router = createBrowserRouter([
         path: "/search/album/artist/:id",
         element: <SearchAlbumArtistCard />,
       },
-
       {
         path: "*",
-        element: <h1>Error 404</h1>,
+        element: <ErrorPage />,
       },
     ],
   },

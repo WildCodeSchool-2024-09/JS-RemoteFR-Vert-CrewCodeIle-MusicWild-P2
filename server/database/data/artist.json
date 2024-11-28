@@ -4,7 +4,7 @@
     "id_genre": 152,
     "name": "The Rolling Stones",
     "description": "Les Rolling Stones, formés en 1962 à Londres, sont un groupe emblématique de rock. Mené par Mick Jagger et Keith Richards, ils révolutionnent la musique avec des classiques comme Paint It Black et (I Can’t Get No) Satisfaction. Leur énergie scénique légendaire les maintient au sommet depuis six décennies.",
-    "picture": "https://e-cdns-images.dzcdn.net/images/artist/2ceac184bc846327f60c5b0d4247cc7a/56x56-000000-80-0-0.jpg",
+    "picture": "https://api.deezer.com/artist/11/image",
     "picture_medium": "https://e-cdns-images.dzcdn.net/images/artist/2ceac184bc846327f60c5b0d4247cc7a/250x250-000000-80-0-0.jpg",
     "picture_big": "https://e-cdns-images.dzcdn.net/images/artist/2ceac184bc846327f60c5b0d4247cc7a/500x500-000000-80-0-0.jpg",
     "picture_xl": "https://e-cdns-images.dzcdn.net/images/artist/2ceac184bc846327f60c5b0d4247cc7a/1000x1000-000000-80-0-0.jpg",

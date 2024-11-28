@@ -17,6 +17,7 @@ import ErrorPage from "./pages/ErrorPage";
 import CatalogPage from "./pages/GenrePage";
 import HomePage from "./pages/HomePage";
 import SearchPage from "./pages/SearchPage";
+import News from "./components/News";
 
 // Try creating these components in the "pages" folder
 
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
       {
         path: "/SearchPage/:categorySearch/:textSearch",
         element: <SearchPage />,
+      },
+      {
+        path: "/news",
+        element: <News />,
       },
       {
         path: "*",

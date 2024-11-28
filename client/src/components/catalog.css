@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   gap: 1em;
-  cursor: pointer;
   margin-bottom: 1em;
 }
 
@@ -20,17 +19,28 @@
   border-radius: 10%;
   height: 200px;
   width: auto;
+  cursor: pointer;
+}
+.catalogDetailsAlbumsSection:hover {
+  cursor: pointer;
+}
+.catalogImage:hover,
+.catalogDetailsImage:hover {
+  transform: scale(1.1);
+  opacity: 70%;
 }
 
 @media screen and (max-width: 992px) {
   .catalogImage,
-  .catalogDetailsImage {
+  .catalogDetailsImage,
+  .catalogDetailsAlbumsSection {
     height: 150px;
   }
 }
 @media screen and (max-width: 700px) {
   .catalogImage,
-  .catalogDetailsImage {
+  .catalogDetailsImage,
+  .catalogDetailsAlbumsSection {
     border-radius: 10%;
     height: 80px;
   }

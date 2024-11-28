@@ -1,4 +1,4 @@
-import ViewSearchList from "../components/ViewSearchList";
+import ViewSearchList from "../components/searchBar/ViewSearchList";
 
 export default function SearchPage() {
   return (

@@ -52,7 +52,7 @@ app.use(
 
 // Uncomment one or more of these options depending on the format of the data sent by your client:
 
-// app.use(express.json());
+app.use(express.json());
 // app.use(express.urlencoded());
 // app.use(express.text());
 // app.use(express.raw());
@@ -99,6 +99,76 @@ if (fs.existsSync(clientBuildPath)) {
     res.sendFile("index.html", { root: clientBuildPath });
   });
 }
+
+/*************************************************************************/
+// Routes DEEZER
+
+router.use(cors({ origin: ["http://localhost:3000"] }));
+
+router.use(express.json());
+
+router.post("/search", async (req, res) => {
+  const { categorySearch, textSearch } = req.body;
+
+  // Search by artist
+
+  if (categorySearch === "Artist") {
+    const response = await fetch(
+      `https://api.deezer.com/search/artist?q="${textSearch}"`,
+    );
+    const data = await response.json();
+    res.json(data);
+  }
+
+  // Search by album
+
+  if (categorySearch === "Album") {
+    const response = await fetch(
+      `https://api.deezer.com/search?q=album:"${textSearch}"`,
+    );
+    const data = await response.json();
+    res.json(data);
+  }
+
+  // Search by Track
+
+  if (categorySearch === "Titre") {
+    const response = await fetch(
+      `https://api.deezer.com/search?q=track:"${textSearch}"`,
+    );
+    const data = await response.json();
+    res.json(data);
+  }
+});
+
+// search track by artist
+router.post("/search/artist/track/", async (req, res) => {
+  const { id } = req.body;
+  const response = await fetch(
+    `https://api.deezer.com/artist/${id}/top?limit=50`,
+  );
+  const data = await response.json();
+  res.json(data);
+});
+
+// search track by album
+router.post("/search/album/track/", async (req, res) => {
+  const { id } = req.body;
+  const response = await fetch(`https://api.deezer.com/album/${id}/tracks`);
+  const data = await response.json();
+  res.json(data);
+});
+
+// search albbum by artist
+
+router.post("/search/album/artist/", async (req, res) => {
+  const { id } = req.body;
+  const response = await fetch(
+    `https://api.deezer.com/artist/${id}/top?limit=25`,
+  );
+  const data = await response.json();
+  res.json(data);
+});
 
 /* ************************************************************************* */
 

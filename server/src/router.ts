@@ -1,6 +1,7 @@
 import express from "express";
 
 const router = express.Router();
+import cors from "cors";
 
 /* ************************************************************************* */
 // Define Your API Routes Here

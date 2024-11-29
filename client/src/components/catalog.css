@@ -1,0 +1,55 @@
+.catalogSection,
+.catalogDetailsSection,
+.catalogDetailsAlbumsSection {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.catalogTitle,
+.catalogDetailsTitle,
+.catalogDetailsAlbumsTitle {
+  text-align: center;
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+.catalogImage,
+.catalogDetailsImage {
+  border-radius: 10%;
+  height: 200px;
+  width: auto;
+  cursor: pointer;
+}
+.catalogDetailsAlbumsSection:hover {
+  cursor: pointer;
+}
+.catalogImage:hover,
+.catalogDetailsImage:hover {
+  transform: scale(1.1);
+  opacity: 70%;
+}
+
+@media screen and (max-width: 992px) {
+  .catalogImage,
+  .catalogDetailsImage,
+  .catalogDetailsAlbumsSection {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .catalogImage,
+  .catalogDetailsImage,
+  .catalogDetailsAlbumsSection {
+    border-radius: 10%;
+    height: 80px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .catalogImage,
+  .catalogDetailsImage {
+    border-radius: 10%;
+    height: 80px;
+    margin: auto;
+  }
+}
